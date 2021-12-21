@@ -1,0 +1,81 @@
+﻿Database
+Name,Version,Author,Description,Emphasis1,Emphasis2,Emphasis3,Emphasis4
+laikaDialogues,,,,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff ---
+Global User Script
+
+Actors
+ID,Portrait,AltPortraits,SpritePortrait,AltSpritePortraits,Name,Pictures,Description,IsPlayer,Display Name
+Number,Special,Special,Special,Special,Text,Files,Text,Boolean,Text
+1,,[],,[],Player,[],,True,
+2,,[],,[],Laika,[],,False,Laika
+3,,[],,[],AI,[],,False,The A.I.
+4,,[],,[],Nobody,[],,False, 
+5,,[],,[],Sputnik,[],,False,Sputnik
+6,,[],,[],Void,[],,False,Void
+Items
+ID
+Number
+Locations
+ID
+Number
+Variables
+ID,Name,Initial Value,Description,InitialValueType
+Number,Text,Text,Text,Text
+1,Alert,,,Text
+Conversations
+ID,Title,Pictures,Description,Actor,Conversant
+Number,Text,Files,Text,Actor,Actor
+1,Start,[],,3,2
+2,MinigameEnd1,[],,4,4
+3,MinigameStart2,[],,5,4
+4,MinigameStart3,[],,6,3
+5,MinigameStart1,[],,3,2
+6,MinigameEnd2,[],,3,2
+7,MinigameEnd3,[],,6,3
+DialogueEntries
+entrytag,ConvID,ID,Actor,Conversant,Title,MenuText,DialogueText,IsGroup,FalseConditionAction,ConditionPriority,Conditions,Script,Sequence,Pictures,Description,Parenthetical,Audio Files,Video File,Response Menu Sequence,canvasRect
+Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Text,Text,Files,Text,Text,Files,Text,Text,Text
+AI_1_0,1,0,3,2,START,,,False,Block,Normal,,,Fade(in),[],,,[],,,30;20
+Nobody_1_1,1,1,4,3,,,"The void whispers…..\r\nBrave Soldier, your journey begins….\r",False,Block,Normal,,,,[],,,[],,,30;70
+Nobody_2_0,2,0,4,4,START,,,False,Block,Normal,,,None(),[],,,[],,,29;20
+Sputnik_2_6,2,6,5,4,,, We’ve done it! You successfully managed to save her from overheating! I’m sorry I lied.,False,Block,Normal,,,"ShowSprite(spaceship,true,true);\nShowSprite(void,false);",[],,,[],,,24.62242;118.3607
+Nobody_2_7,2,7,4,5,,," I thought it would be motivational. Ironically, a flight that promises certain death also offers proof that space is inhabitable. ",False,Block,Normal,,,,[],,,[],,,22.31147;217.5411
+Sputnik_3_0,3,0,5,5,START,,,False,Block,Normal,,,None(),[],,,[],,,30;20
+Sputnik_3_1,3,1,5,1,,,Warning! Strong Gravitational Force Has Been Detected .\n,False,Block,Normal,,,"CamShake(0.7, 1, 1);\n",[],,,[],,,25;143
+Player_3_2,3,2,1,5,,,"I have been programmed to promise to provide you with good advice: For instance, that thing over there is going to kill you. Try to avoid it.\n",False,Block,Normal,,,,[],,,[],,,25;197
+Sputnik_3_3,3,3,5,1,,,"The Void Whispers… Laika, Do you feel pain?\r\n",False,Block,Normal,,,,[],,,[],,,27;77
+Void_4_0,4,0,6,3,START,,,False,Block,Normal,,,None(),[],,,[],,,30;20
+Void_4_1,4,1,6,1,,,Welcome. To Paradise. You have been saved from the scourge known as the human race.\n,False,Block,Normal,,,"ShowSprite(spaceship,false,true);\nShowSprite(void,true);\nAnimatorTrigger(openEyes,void);",[],,,[],,,30;70
+AI_4_2,4,2,3,6,,,"Well, would you look at that. Another absent parent blaming nature for their child's misbehavior. ",False,Block,Normal,,,,[],,,[],,,30;120
+AI_5_0,5,0,3,2,START,,,False,Block,Normal,,,None(),[],,,[],,,30;20
+AI_5_4,5,4,3,3,,,Oh Hi! A human. ,False,Block,Normal,,,AudioWait(dialogues/HiHuman);\n,[],,,[],,,81.94029;186.0447
+AI_5_5,5,5,3,3,,,Say you’re good at murder.,False,Block,Normal,,,,[],,,[],,,77.95523;245.985
+AI_5_6,5,6,3,3,,,How about you murder those buttons and bars in the top right corner for me.,False,Block,Normal,,,,[],,,[],,,77.95523;327.3283
+AI_6_0,6,0,3,2,START,,,False,,Normal,,,None(),[],,,[],,,30;20
+Sputnik_6_1,6,1,5,3,,,We’ve done it!....For now… please continue doing whatever it is you think you’re doing.,False,Block,Normal,,,,[],,,[],,,31;70
+Sputnik_6_2,6,2,5,3,,,I will now present an amusing fact: Laika is breathing recycled air.,False,Block,Normal,,,,[],,,[],,,31;120
+Sputnik_6_3,6,3,5,3,,,"That’s right, the air in this ship is just carbon dioxide spiced up a little and pumped straight back into the chamber.",False,Block,Normal,,,AudioWait(dialogues/ThatsRight),[],,,[],,,31;170
+Sputnik_6_4,6,4,5,3,,, I thought that was amusing.,False,Block,Normal,,,,[],,,[],,,31;220
+Void_7_0,7,0,6,3,START,,,False,Block,Normal,,,None(),[],,,[],,,30;19
+Sputnik_7_1,7,1,5,6,,,"You’ve done it. [Subject name here] is the pride of [subject hometown here] You are the financial pinnacle of your community, your parents are very proud of you. As you can see, we are now approaching that thing I previously said would kill us. Good Job. Game Over. \r\n",False,Block,Normal,,,,[],,,[],,,31;187
+AI_7_2,7,2,3,6,,,The Void Whispers…\r\nRelax…\r\nThink of a tree.\r\nJust Breathe.\r\nThat’s all a tree does.\r\nBe Like A Tree\r\nBreathe\r\nAnd Know\r\nIt’s enough.\r\nOnly humans need more to be happy.\r,False,Block,Normal,,,,[],,,[],,,33;111
+OutgoingLinks
+OriginConvID,OriginID,DestConvID,DestID,ConditionPriority
+Number,Number,Number,Number,Special
+1,0,1,1,Normal
+2,0,2,6,Normal
+2,6,2,7,Normal
+3,0,3,3,Normal
+3,1,3,2,Normal
+3,1,3,3,Normal
+4,0,4,1,Normal
+4,1,4,2,Normal
+5,0,5,4,Normal
+5,4,5,5,Normal
+5,5,5,6,Normal
+6,0,6,1,Normal
+6,1,6,2,Normal
+6,2,6,3,Normal
+6,3,6,4,Normal
+7,0,7,2,Normal
+7,2,7,1,Normal

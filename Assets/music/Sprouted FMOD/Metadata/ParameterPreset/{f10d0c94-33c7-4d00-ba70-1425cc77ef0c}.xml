@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{f10d0c94-33c7-4d00-ba70-1425cc77ef0c}">
+		<property name="name">
+			<value>Underground</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fe47f887-cd3d-4618-8f6d-c9a191b3dc56}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7eb0762c-3e34-494b-91d4-8b1984a7d35d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7eb0762c-3e34-494b-91d4-8b1984a7d35d}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>1.8000000715255737</value>
+		</property>
+	</object>
+</objects>
