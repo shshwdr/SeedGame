@@ -9595,7 +9595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -115.05, y: -1.21, z: -10}
+  m_LocalPosition: {x: -105.19, y: -1.59, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1514311091}
@@ -9625,6 +9625,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: abc70a88670a3d644ac8ced5ef1696bc, type: 3}
   plantGrow: {fileID: 8300000, guid: df1c6fd38bb580c4da82b7b67a22a540, type: 3}
   die: {fileID: 8300000, guid: 83a5a570ae2f67444bcaaa1b8ce60ac6, type: 3}
+  dieEvent:
+    Guid:
+      Data1: -1354889927
+      Data2: 1296321063
+      Data3: -309436518
+      Data4: 109564228
+    Path: event:/SFX/Plant Grows
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35087,6 +35094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960716934}
   - component: {fileID: 1960716935}
+  - component: {fileID: 1960716937}
   m_Layer: 0
   m_Name: music
   m_TagString: Untagged
@@ -35120,6 +35128,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c23affb530f5174ca25ce3a47f8360d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1960716937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960716933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1001 &1967246711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35270,7 +35308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967265448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -115.05, y: -1.21, z: -10}
+  m_LocalPosition: {x: -105.19, y: -1.59, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 929608677}
@@ -38309,12 +38347,12 @@ PrefabInstance:
     - target: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -115.05
+      value: -105.19
       objectReference: {fileID: 0}
     - target: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,
         type: 3}

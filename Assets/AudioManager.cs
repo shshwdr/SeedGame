@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using FMODUnity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,9 @@ public class AudioManager : Singleton<AudioManager>
     public AudioClip[] jump;
     public AudioClip plantGrow;
     public AudioClip die;
-    
+
+    public EventReference dieEvent;
+
     Dictionary<AudioClip, int> clipToId;
     // Start is called before the first frame update
     void Start()
@@ -50,11 +53,14 @@ public class AudioManager : Singleton<AudioManager>
     }
     public void playPlantGrow()
     {
-        playAudio(plantGrow);
+        //playAudio(plantGrow);
+        //FMODUnity.RuntimeManager.CreateInstance(dieEvent);
     }
     public void playDie()
     {
-        playAudio(die);
+        var ins = FMODUnity.RuntimeManager.CreateInstance(dieEvent);
+        ins.start();
+        //playAudio(die);
     }
     public void playInsect()
     {

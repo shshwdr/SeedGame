@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6408450927494737097
+--- !u!114 &-3197857914738106750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/music/Sprouted FMOD/Build/Desktop/Master.strings.bank
+  Path: Assets/music/Sprouted FMOD Test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637501156522088129
-  LoadResult: 0
+  lastModified: 637756163240000000
   FileSizes:
   - Name: Desktop
-    Value: 848
+    Value: 870
   Exists: 1
---- !u!114 &-2234358041132746042
+--- !u!114 &-1195445821016044374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,17 +30,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Underground
+  m_Name: parameter:/Music/Intensity
   m_EditorClassIdentifier: 
-  Name: Underground
+  Name: Intensity
+  StudioPath: 
   Min: 0
-  Max: 1
+  Max: 4
   Default: 0
   ID:
-    data1: 0
-    data2: 0
+    data1: 1654375169
+    data2: 846163462
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
---- !u!114 &-486554840596652043
+--- !u!114 &-413259732233311491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,12 +56,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/music/Sprouted FMOD/Build/Desktop/Master.bank
+  Path: Assets/music/Sprouted FMOD Test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637501156522088129
-  LoadResult: 0
-  FileSizes: []
+  lastModified: 637756163240000000
+  FileSizes:
+  - Name: Desktop
+    Value: 7655584
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -73,18 +77,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6408450927494737097}
-  - {fileID: -486554840596652043}
+  - {fileID: -3197857914738106750}
+  - {fileID: -413259732233311491}
   EditorEvents:
-  - {fileID: 1242520303599592265}
+  - {fileID: 8014698392751394694}
+  - {fileID: 5264286280902587014}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -486554840596652043}
+  - {fileID: -413259732233311491}
   StringsBanks:
-  - {fileID: -6408450927494737097}
-  stringsBankWriteTime: 637501156522088129
-  cacheVersion: 6
---- !u!114 &1242520303599592265
+  - {fileID: -3197857914738106750}
+  cacheTime: 637756163240000000
+  cacheVersion: 10
+--- !u!114 &5264286280902587014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,22 +99,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Name: event:/Music/Music
   m_EditorClassIdentifier: 
-  Path: event:/Music
-  guid: 1b8b9a6fc4c4f044b5b7bf93e25f069b
+  Path: event:/Music/Music
+  Guid:
+    Data1: -2024854788
+    Data2: 1191627871
+    Data3: 1960883901
+    Data4: 1131565887
   Banks:
-  - {fileID: -486554840596652043}
+  - {fileID: -413259732233311491}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6500795156672416298}
-  - {fileID: -2234358041132746042}
-  MinDistance: 0
-  MaxDistance: 0
+  - {fileID: -1195445821016044374}
+  MinDistance: 1
+  MaxDistance: 20
   Length: 126593
---- !u!114 &6500795156672416298
+--- !u!114 &8014698392751394694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,14 +126,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Intensity
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Plant Grows
   m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 1
-  Max: 5
-  Default: 1
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Path: event:/SFX/Plant Grows
+  Guid:
+    Data1: -1354889927
+    Data2: 1296321063
+    Data3: -309436518
+    Data4: 109564228
+  Banks:
+  - {fileID: -413259732233311491}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2194

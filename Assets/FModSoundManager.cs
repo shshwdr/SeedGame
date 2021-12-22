@@ -11,8 +11,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
     string currentEvent;
     FMOD.Studio.EventInstance[] ambiences = new FMOD.Studio.EventInstance[2];
     int currentId = 0;
-    float volumnValue = 0.2f;
-    float defaultVolumn = 0.2f;
+    float defaultVolumn = 1f;
     bool pressedStart = false;
 
 
@@ -22,7 +21,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
 
     void Start()
     {
-        startEvent("event:/Music");
+        startEvent("event:/Music/Music");
         //ambience = FMODUnity.RuntimeManager.CreateInstance(eventName);
         //ambience.start();
         // Invoke("delayTest", 0.1f);
