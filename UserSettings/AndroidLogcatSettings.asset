@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "53F5T19318002403",
         "name": "com.DefaultCompany.Sprouted",
-        "processId": 9284,
+        "processId": 12739,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -17,30 +17,6 @@
         {
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
-            "processId": 5696,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
-            "processId": 6662,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
-            "processId": 7431,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
-            "processId": 9045,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
             "processId": 10842,
             "exited": true
         },
@@ -48,24 +24,30 @@
             "deviceId": "53F5T19318002403",
             "name": "com.huawei.android.hwouc",
             "processId": 27938,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
             "processId": 31434,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
             "processId": 3340,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
             "processId": 9284,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.DefaultCompany.Sprouted",
+            "processId": 12739,
             "exited": false
         }
     ],

@@ -45,6 +45,7 @@ public class Resolution : MonoBehaviour
     public Camera mainCamera;
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         //Screen.SetResolution(1334, 750, true, 60);
         //mainCamera = Camera.main;
         //  float screenAspect = 1334 / 750;  //现在android手机的主流分辨。
@@ -57,6 +58,21 @@ public class Resolution : MonoBehaviour
     {
         FitCamera(Camera.main);
     }
+
+    void OnPreRender()
+    {
+        GL.Clear(true, true, Color.black);
+    }
+
+    //void OnApplicationFocus(bool hasFocus)
+    //{
+    //    OnPreRender();
+    //}
+
+    //void OnApplicationPause(bool pauseStatus)
+    //{
+    //    OnPreRender();
+    //}
 
     public void FitCamera(Camera camera)
     {

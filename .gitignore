@@ -9,7 +9,7 @@ Assets/AssetStoreTools*
 builds
 windowsBuild
 build
-
+Editor/
 buildWindows
 pakcedBuild
 # ===================================== #
