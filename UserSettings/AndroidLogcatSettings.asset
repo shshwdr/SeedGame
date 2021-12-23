@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "53F5T19318002403",
     "m_SelectedPackage": {
-        "deviceId": "53F5T19318002403",
-        "name": "com.DefaultCompany.Sprouted",
-        "processId": 14375,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -17,30 +17,6 @@
         {
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
-            "processId": 10842,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.huawei.android.hwouc",
-            "processId": 27938,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
-            "processId": 31434,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
-            "processId": 3340,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
             "processId": 9284,
             "exited": true
         },
@@ -48,13 +24,25 @@
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
             "processId": 12739,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
             "processId": 14375,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.DefaultCompany.Sprouted",
+            "processId": 25906,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.DefaultCompany.Sprouted",
+            "processId": 31561,
+            "exited": true
         }
     ],
     "m_Tags": {

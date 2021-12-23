@@ -35,8 +35,12 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
 
     public void clickHintButton()
     {
-
-        AdsManager.Instance.ShowAd(this);
+        PopupDialogue.createPopupDialogue(Dialogues.dialogues["hintDialog"], () =>
+         {
+             Debug.Log("pop up for hint");
+             isActive = true;
+             AdsManager.Instance.ShowAd(this);
+         });
 
         //PlantManager.Instance.showPlantHint(plantName);
         //init();
@@ -67,10 +71,10 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
     {
         Debug.Log("Unity Ads  show click.");
     }
-
+    bool isActive = false;//a bad bad bad idea but I don't know how to fix this
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
-        if (placementId.Equals(AdsManager.Instance._unitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        if (isActive && placementId.Equals(AdsManager.Instance._unitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
@@ -83,10 +87,12 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
         {
 
         }
+        isActive = false;
     }
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
+        isActive = false;
         Debug.LogError($"Unity Ads Show Failed: {error.ToString()} - {message}");
     }
 

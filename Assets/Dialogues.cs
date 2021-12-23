@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Dialogues : Singleton<Dialogues>
 {
-    static Dictionary<string,string> dialogues = new Dictionary<string, string>()
+    static public Dictionary<string,string> dialogues = new Dictionary<string, string>()
     {
 
         {"start","The seed wants to spread throughout the world. Help it reach its goal.\n Use arrow key to move." },
@@ -43,6 +43,14 @@ public class Dialogues : Singleton<Dialogues>
 
 
         {"progressFull","The seed has now completed its journey, as it has spread throughout the world. Thanks for helping it!" },
+
+
+
+        {"hintDialog","Do you want to watch ads to get a hint?" },
+        {"thanksDialog","Thanks For supporting us!" },
+        {"supportDialog","Do you want to watch ads to support us?" },
+        {"credits","Programmer: Flavedo\nArtist:Sealcat\nComposer:Dieck" },
+        {"restart","Do you want to clear your previous data and restart the game?" },
 
     };
 

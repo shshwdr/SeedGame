@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3433894219577212561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6481575705073701013}
-        m_TargetAssemblyTypeName: PlantOnePage, Assembly-CSharp
-        m_MethodName: clickHintButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1338814669508124422
 GameObject:
   m_ObjectHideFlags: 0

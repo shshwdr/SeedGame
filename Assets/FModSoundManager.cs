@@ -145,8 +145,24 @@ public class FModSoundManager : Singleton<FModSoundManager>
 
     public void restartGame()
     {
-        //popup and ask if you really want to restart
-        SaveLoadManager.clearSavedData();
-        pressedStart = true;
+        if (hasPreviousGame())
+        {
+
+            //popup and ask if you really want to restart
+            PopupDialogue.createPopupDialogue(Dialogues.dialogues["restart"], () =>
+            {
+                Debug.Log("restart");
+                SaveLoadManager.clearSavedData();
+                pressedStart = true;
+            });
+        }
+        else
+        {
+
+            Debug.Log("new");
+            SaveLoadManager.clearSavedData();
+            pressedStart = true;
+        }
     }
+
 }

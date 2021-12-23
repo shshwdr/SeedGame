@@ -9,9 +9,16 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
     [SerializeField] string _iOsAdGameId = "Interstitial_iOS";
     string _gameId;
 
-    [SerializeField] string _iOsAdUnitId = "Rewarded_Android";
-    [SerializeField] string _androidAdUnitId = "Rewarded_iOS";
+    [SerializeField] string _iOsAdUnitId = "Rewarded_iOS";
+    [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     public string _unitId;
+
+
+    [SerializeField] string _iosInterstitial = "Interstitial_iOS";
+    [SerializeField] string _androidInterstitial = "Interstitial_Android";
+    public string _interstitialId;
+
+
     public bool testMode = true;
 
     public void OnUnityAdsAdLoaded(string placementId)
@@ -27,9 +34,13 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
         _unitId = (Application.platform == RuntimePlatform.IPhonePlayer)
             ? _iOsAdUnitId
             : _androidAdUnitId;
+        _interstitialId = (Application.platform == RuntimePlatform.IPhonePlayer)
+            ? _iosInterstitial
+            : _androidInterstitial;
         //Advertisement.AddListener(this);
         Advertisement.Initialize(_gameId, testMode,this);
         Advertisement.Load(_unitId, this);
+        Advertisement.Load(_interstitialId, this);
     }
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
@@ -43,18 +54,40 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
         Advertisement.Load(_unitId, this);
     }
 
+    public void LoadInter()
+    {
+
+        Advertisement.Load(_interstitialId, this);
+    }
+
+    public void showInterAd(IUnityAdsShowListener listener)
+    {
+        if (!Advertisement.isInitialized)
+        {
+            Advertisement.Initialize(_gameId, testMode);  //// 1st parameter is String and 2nd is boolean
+        }
+        if (Advertisement.isInitialized)
+        {
+
+            Debug.Log("Showing Ad: " + _interstitialId);
+            Advertisement.Show(_interstitialId, listener);
+        }
+        else
+        {
+            Debug.LogError("ad no initialized");
+        }
+    }
+
     public void ShowAd(IUnityAdsShowListener listener)
     {
         if (!Advertisement.isInitialized)
         {
-            Advertisement.Initialize(_unitId, testMode);  //// 1st parameter is String and 2nd is boolean
+            Advertisement.Initialize(_gameId, testMode);  //// 1st parameter is String and 2nd is boolean
         }
         if (Advertisement.isInitialized)
         {
 
             Debug.Log("Showing Ad: " + _unitId);
-            ShowOptions options = new ShowOptions();
-           // options.
             Advertisement.Show(_unitId, listener);
         }
         else

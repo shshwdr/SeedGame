@@ -2980,7 +2980,7 @@ GameObject:
   - component: {fileID: 159764843}
   - component: {fileID: 159764844}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9729,7 +9729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -105.19, y: -1.59, z: -10}
+  m_LocalPosition: {x: -114.65, y: -2.57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1514311091}
@@ -28048,6 +28048,9 @@ MonoBehaviour:
   _iOsAdUnitId: Rewarded_iOS
   _androidAdUnitId: Rewarded_Android
   _unitId: 
+  _iosInterstitial: Interstitial_iOS
+  _androidInterstitial: Interstitial_Android
+  _interstitialId: 
   testMode: 0
 --- !u!4 &1512322916 stripped
 Transform:
@@ -35626,7 +35629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967265448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -105.19, y: -1.59, z: -10}
+  m_LocalPosition: {x: -114.65, y: -2.57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 929608677}
@@ -38665,12 +38668,12 @@ PrefabInstance:
     - target: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.19
+      value: -114.65
       objectReference: {fileID: 0}
     - target: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.59
+      value: -2.57
       objectReference: {fileID: 0}
     - target: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,
         type: 3}
