@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
-public class PlantOnePage : MonoBehaviour
+public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
 {
     public string plantName;
     public TMP_Text plantDescriptionLabel;
@@ -34,8 +35,11 @@ public class PlantOnePage : MonoBehaviour
 
     public void clickHintButton()
     {
-        PlantManager.Instance.showPlantHint(plantName);
-        init();
+
+        AdsManager.Instance.ShowAd(this);
+
+        //PlantManager.Instance.showPlantHint(plantName);
+        //init();
     }
     // Start is called before the first frame update
     void Start()
@@ -55,5 +59,39 @@ public class PlantOnePage : MonoBehaviour
         {
             plantName = name;
         }
+    }
+
+
+
+    public void OnUnityAdsShowClick(string placementId)
+    {
+        Debug.Log("Unity Ads  show click.");
+    }
+
+    public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
+    {
+        if (placementId.Equals(AdsManager.Instance._unitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        {
+            Debug.Log("Unity Ads Rewarded Ad Completed");
+            // Grant a reward.
+            PlantManager.Instance.showPlantHint(plantName);
+            init();
+            // Load another ad:
+            AdsManager.Instance.Load();
+        }
+        else
+        {
+
+        }
+    }
+
+    public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
+    {
+        Debug.LogError($"Unity Ads Show Failed: {error.ToString()} - {message}");
+    }
+
+    public void OnUnityAdsShowStart(string placementId)
+    {
+        Debug.Log("Unity Ads Start show.");
     }
 }

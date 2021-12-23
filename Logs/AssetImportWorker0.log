@@ -153,3 +153,14 @@ Received Import Request.
 Start importing Assets/Editor/GlobalConfig.cs using Guid(14671a66c4aaa064691453e11862ecd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc40ff8fd9450541a68f7055bfa94db7') in 0.008988 seconds
   Import took 0.019433 seconds .
 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 33.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 55.9 MB.
+System memory in use after: 56.0 MB.
+
+Unloading 60 unused Assets to reduce memory usage. Loaded Objects now: 2616.
+Total: 6.495400 ms (FindLiveObjects: 0.342800 ms CreateObjectMapping: 0.154800 ms MarkObjects: 5.920600 ms  DeleteObjects: 0.073500 ms)
+

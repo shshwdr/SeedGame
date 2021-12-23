@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "53F5T19318002403",
         "name": "com.DefaultCompany.Sprouted",
-        "processId": 12739,
+        "processId": 14375,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -48,6 +48,12 @@
             "deviceId": "53F5T19318002403",
             "name": "com.DefaultCompany.Sprouted",
             "processId": 12739,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.DefaultCompany.Sprouted",
+            "processId": 14375,
             "exited": false
         }
     ],
