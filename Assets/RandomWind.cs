@@ -15,33 +15,53 @@ namespace UnityChan
 	{
 		private SpringBone[] springBones;
 		public bool isWindActive = true;
-		public float speed = 0.005f;
-		public float timeScale = 0.1f;
-		float offset;
+		private float startValue = 0;
+		public float speed = 0.05f;
+
+        bool isStronger = false;
+        public float strongerScale = 3;
+        public float windTime = 1f;
 		// Use this for initialization
-		void Start ()
+		void Start()
 		{
-			springBones = GetComponent<SpringManager> ().springBones;
-			offset = Time.time;
+			springBones = GetComponent<SpringManager>().springBones;
+			startValue = Random.Range(0f, 1f);
 		}
 
 		// Update is called once per frame
-		void Update ()
+		void Update()
 		{
 			Vector3 force = Vector3.zero;
-			if (isWindActive) {
-				force = new Vector3 (Mathf.PerlinNoise (Time.time*timeScale, offset) * speed, 0, 0);
+			if (isWindActive)
+			{
+				force = new Vector3((Mathf.PerlinNoise(Time.time, startValue)-0.5f) * speed, 0, 0);
 			}
-
-			for (int i = 0; i < springBones.Length; i++) {
-				springBones [i].springForce = force;
+            if (isStronger)
+            {
+                force = force * strongerScale;
+            }
+			for (int i = 0; i < springBones.Length; i++)
+			{
+				springBones[i].springForce = force;
 			}
 		}
 
-		void OnGUI ()
+        public void interact()
+        {
+            StartCoroutine(wind());
+        }
+
+        private IEnumerator wind()
+        {
+            isStronger = true;
+            yield return new WaitForSeconds(windTime);
+            isStronger = false;
+        }
+
+        void OnGUI()
 		{
-			Rect rect1 = new Rect (10, Screen.height - 40, 400, 30);
-			isWindActive = GUI.Toggle (rect1, isWindActive, "Random Wind");
+			Rect rect1 = new Rect(10, Screen.height - 40, 400, 30);
+			//isWindActive = GUI.Toggle(rect1, isWindActive, "Random Wind");
 		}
 
 	}
