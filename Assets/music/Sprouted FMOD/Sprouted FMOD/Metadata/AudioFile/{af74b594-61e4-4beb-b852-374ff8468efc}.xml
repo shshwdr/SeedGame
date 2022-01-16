@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{af74b594-61e4-4beb-b852-374ff8468efc}">
+		<property name="assetPath">
+			<value>SFX/Seed/Seed Drown.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1428571428571428</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4a2184-8515-4f84-a894-a2b4a7f84302}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{eb8a1309-e323-4626-8039-78e93ebdfeec}">
+		<property name="assetPath">
+			<value>Music/Sprouted Tier 3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>126.59340136054422</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4a2184-8515-4f84-a894-a2b4a7f84302}</destination>
+		</relationship>
+	</object>
+</objects>

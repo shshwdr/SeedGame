@@ -335,8 +335,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/music/Sprouted FMOD Test/Sprouted FMOD Test.fspro
-  sourceBankPath: Assets/music/Sprouted FMOD Test/Build
+  sourceProjectPath: Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Sprouted FMOD.fspro
+  sourceBankPath: Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

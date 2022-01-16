@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "53F5T19318002403",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "53F5T19318002403",
+        "name": "com.flavedo.Sprouted",
+        "processId": 20870,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -43,6 +43,12 @@
             "name": "com.DefaultCompany.Sprouted",
             "processId": 31561,
             "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 20870,
+            "exited": false
         }
     ],
     "m_Tags": {

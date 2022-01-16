@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{6db75e59-9fc1-4ad7-9822-c727801c8670}">
+		<property name="assetPath">
+			<value>SFX/Footsteps/Rubber/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4a2184-8515-4f84-a894-a2b4a7f84302}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -54,29 +54,31 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
         Advertisement.Load(_unitId, this);
     }
 
-    public void LoadInter()
-    {
+    //public void LoadInter()
+    //{
 
-        Advertisement.Load(_interstitialId, this);
-    }
+    //    Advertisement.Load(_interstitialId, this);
+    //}
 
-    public void showInterAd(IUnityAdsShowListener listener)
-    {
-        if (!Advertisement.isInitialized)
-        {
-            Advertisement.Initialize(_gameId, testMode);  //// 1st parameter is String and 2nd is boolean
-        }
-        if (Advertisement.isInitialized)
-        {
+    //public void showInterAd(IUnityAdsShowListener listener)
+    //{
+    //    if (!Advertisement.isInitialized)
+    //    {
+    //        Advertisement.Initialize(_gameId, testMode);  //// 1st parameter is String and 2nd is boolean
+    //    }
+    //    if (Advertisement.isInitialized)
+    //    {
 
-            Debug.Log("Showing Ad: " + _interstitialId);
-            Advertisement.Show(_interstitialId, listener);
-        }
-        else
-        {
-            Debug.LogError("ad no initialized");
-        }
-    }
+    //        Debug.Log("Showing Ad: " + _interstitialId);
+    //        Advertisement.Show(_interstitialId, listener);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("ad no initialized");
+    //    }
+    //    // Load another ad:
+    //    AdsManager.Instance.LoadInter();
+    //}
 
     public void ShowAd(IUnityAdsShowListener listener)
     {
@@ -94,6 +96,8 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
         {
             Debug.LogError("ad no initialized");
         }
+        // Load another ad:
+        AdsManager.Instance.Load();
     }
 
     // Start is called before the first frame update

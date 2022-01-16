@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using FMOD.Studio;
+using FMODUnity;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
@@ -19,11 +21,16 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = false;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	[SerializeField] private float footstepTime;
+	float footstepTimer;
+
 	[Header("Events")]
 	[Space]
 
 	public UnityEvent OnLandEvent;
-
+	public UnityEvent OnStepEvent;
+	public EventReference OnStepEventReference;
+	public EventReference OnGroundedEventReference;
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
@@ -34,6 +41,7 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Awake()
 	{
+
 		animator = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -60,8 +68,24 @@ public class CharacterController2D : MonoBehaviour
 			{
 				m_Grounded = true;
 				if (!wasGrounded)
+                {
+
 					OnLandEvent.Invoke();
+					FMODUnity.RuntimeManager.PlayOneShot(OnGroundedEventReference);
+				}
 			}
+		}
+
+		if (m_Rigidbody2D.velocity.magnitude>0.1f && m_Grounded)
+		{
+			if (footstepTimer > footstepTime)
+			{
+				OnStepEvent.Invoke();
+				FMODUnity.RuntimeManager.PlayOneShot(OnStepEventReference);
+				footstepTimer = 0;
+			}
+
+			footstepTimer += Time.deltaTime;
 		}
 	}
 

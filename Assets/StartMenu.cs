@@ -75,8 +75,6 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
 
             PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
 
-            // Load another ad:
-            AdsManager.Instance.Load();
         }
         else
         {

@@ -80,8 +80,6 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
             // Grant a reward.
             PlantManager.Instance.showPlantHint(plantName);
             init();
-            // Load another ad:
-            AdsManager.Instance.Load();
         }
         else
         {

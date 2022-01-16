@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{19ba45fb-5daf-4031-a913-991c2501cd30}">
+		<property name="name">
+			<value>Tunnel</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de40bef3-e1c8-40c7-952d-c59029139d62}</destination>
+		</relationship>
+	</object>
+</objects>
