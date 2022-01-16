@@ -56,7 +56,10 @@ public class Resolution : MonoBehaviour
 
     private void Awake()
     {
-        FitCamera(Camera.main);
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            FitCamera(Camera.main);
+        }
     }
 
     void OnPreRender()

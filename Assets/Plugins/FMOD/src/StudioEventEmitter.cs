@@ -178,13 +178,12 @@ namespace FMODUnity
             {
                 instance.clearHandle();
             }
-
             // Let previous oneshot instances play out
-            if (isOneshot && instance.isValid())
-            {
-                instance.release();
-                instance.clearHandle();
-            }
+            //if (isOneshot && instance.isValid())
+            //{
+            //    instance.release();
+            //    instance.clearHandle();
+            //}
 
             bool is3D;
             eventDescription.is3D(out is3D);

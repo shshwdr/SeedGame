@@ -39,12 +39,18 @@ public class PlayerMovement : SerializableObject
     // Start is called before the first frame update
     void Awake()
     {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            usingJoyStick = true;
+        }
         controller = GetComponent<CharacterController2D>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         EventPool.OptIn("clickGameOver", GameoverRespawn);
     }
+
+
 
     public override void Save(SerializedGame save)
     {

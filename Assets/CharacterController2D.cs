@@ -29,8 +29,9 @@ public class CharacterController2D : MonoBehaviour
 
 	public UnityEvent OnLandEvent;
 	public UnityEvent OnStepEvent;
-	public EventReference OnStepEventReference;
-	public EventReference OnGroundedEventReference;
+
+	public StudioEventEmitter footStepEmitter;
+	public float footStepMakeSoundMinDistance = 0.3f;
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
@@ -54,6 +55,11 @@ public class CharacterController2D : MonoBehaviour
 		k_GroundedRadius = m_GroundCheck.GetComponent<CircleCollider2D>().radius * m_GroundCheck.lossyScale.x;
 	}
 
+	public void changeParamByName(string paramName,float paramValue)
+	{
+		footStepEmitter.SetParameter(paramName, paramValue);
+	}
+
 	private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
@@ -71,17 +77,17 @@ public class CharacterController2D : MonoBehaviour
                 {
 
 					OnLandEvent.Invoke();
-					FMODUnity.RuntimeManager.PlayOneShot(OnGroundedEventReference);
+					footStepEmitter.Play();
 				}
 			}
 		}
 
-		if (m_Rigidbody2D.velocity.magnitude>0.1f && m_Grounded)
+		if (m_Rigidbody2D.velocity.magnitude>footStepMakeSoundMinDistance && m_Grounded)
 		{
 			if (footstepTimer > footstepTime)
 			{
 				OnStepEvent.Invoke();
-				FMODUnity.RuntimeManager.PlayOneShot(OnStepEventReference);
+				footStepEmitter.Play();
 				footstepTimer = 0;
 			}
 
