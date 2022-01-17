@@ -130,6 +130,7 @@ public class Dialogues : Singleton<Dialogues>
 
     public void hideGameOverText()
     {
+        AudioManager.Instance.playEndMessage();
         hideText(gameoverText);
         joystick.SetActive(true);
         jumpButton.SetActive(true);

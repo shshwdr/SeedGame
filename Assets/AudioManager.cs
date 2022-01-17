@@ -33,10 +33,34 @@ public class AudioManager : Singleton<AudioManager>
     public EventReference seedRespawn;
     public EventReference seedJump;
 
+    public EventReference endMessage;
+
+
+    void initVolume(string groupName)
+    {
+        var finalString = "bus:/" + groupName;
+        //read from playerPref
+        float value = 1;
+        if (PlayerPrefs.HasKey(finalString))
+        {
+            //changeVolume( PlayerPrefs.GetFloat(finalString));
+            value = PlayerPrefs.GetFloat(finalString);
+        }
+
+        FMOD.Studio.Bus masterBus;
+
+        masterBus = FMODUnity.RuntimeManager.GetBus(finalString);
+        masterBus.setVolume(value);
+        PlayerPrefs.SetFloat(finalString, value);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        initVolume("Music");
+        initVolume("SFX");
+
+
         //audio = GetComponent<AudioSource>();
         //clipToId = new Dictionary<AudioClip, int>();
     }
@@ -44,6 +68,10 @@ public class AudioManager : Singleton<AudioManager>
     public void playSeedRespawn()
     {
         RuntimeManager.PlayOneShot(seedRespawn);
+    }
+    public void playEndMessage()
+    {
+        RuntimeManager.PlayOneShot(endMessage);
     }
 
     public void playWater()

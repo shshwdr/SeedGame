@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &721019800142912475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721019800142912474}
+  - component: {fileID: 721019800142912473}
+  - component: {fileID: 721019800142912472}
+  m_Layer: 0
+  m_Name: audioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721019800142912474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721019800142912475}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721019800142912473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721019800142912475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991b7707100a47f45ab8e420d6a61852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantGrowEvent:
+    Guid:
+      Data1: -55319907
+      Data2: 1199950801
+      Data3: 1316942525
+      Data4: 22878993
+    Path: event:/SFX/Plants/Plant Grows
+  dieEvent:
+    Guid:
+      Data1: 270329516
+      Data2: 1116441873
+      Data3: 759835818
+      Data4: 419798565
+    Path: event:/SFX/Seed/Break
+  menuButtonEvent:
+    Guid:
+      Data1: 1502234423
+      Data2: 1084437724
+      Data3: -512677726
+      Data4: 2126494958
+    Path: event:/SFX/UI/Menu Buttons
+  turnalDown:
+    Guid:
+      Data1: -1521627992
+      Data2: 1315037075
+      Data3: 1264203404
+      Data4: -900042962
+    Path: event:/SFX/Tunnel/Tunnel Go Down
+  turnalUp:
+    Guid:
+      Data1: -1163687482
+      Data2: 1106758850
+      Data3: -285135222
+      Data4: 104905799
+    Path: event:/SFX/Tunnel/Tunnel Go Up
+  turnalSpawn:
+    Guid:
+      Data1: -1209205677
+      Data2: 1098516530
+      Data3: -74850394
+      Data4: -1987268491
+    Path: event:/SFX/Tunnel/Tunnel Spawn
+  bug:
+    Guid:
+      Data1: -563368729
+      Data2: 1242243461
+      Data3: 631264185
+      Data4: 2106678318
+    Path: event:/SFX/Enemies/Bugs
+  hoe:
+    Guid:
+      Data1: 695321249
+      Data2: 1300228540
+      Data3: 1144698279
+      Data4: -552835760
+    Path: event:/SFX/Enemies/Hoe Swing
+  fallOnLotusHigh:
+    Guid:
+      Data1: 820702139
+      Data2: 1076753602
+      Data3: -1368334402
+      Data4: 270364515
+    Path: event:/SFX/Plants/Fall on Lotus_High
+  fallOnLotusLow:
+    Guid:
+      Data1: -388890979
+      Data2: 1141868365
+      Data3: -286561612
+      Data4: 2088451580
+    Path: event:/SFX/Plants/Fall on Lotus_Low
+  seedDrown:
+    Guid:
+      Data1: 1608376855
+      Data2: 1196004312
+      Data3: 615625365
+      Data4: 206939019
+    Path: event:/SFX/Seed/Drown
+  seedRespawn:
+    Guid:
+      Data1: -362069610
+      Data2: 1295552203
+      Data3: 1416735365
+      Data4: 1143135151
+    Path: event:/SFX/Seed/Respawn
+  seedJump:
+    Guid:
+      Data1: -760469673
+      Data2: 1196238895
+      Data3: 904725694
+      Data4: 1055780901
+    Path: event:/SFX/Seed/Jump
+  endMessage:
+    Guid:
+      Data1: 1125178022
+      Data2: 1115490402
+      Data3: 1351699119
+      Data4: 1281933185
+    Path: event:/SFX/UI/End Message
+--- !u!114 &721019800142912472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721019800142912475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
