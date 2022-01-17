@@ -1,18 +1,21 @@
-﻿using System.Collections;
+﻿using FMODUnity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HoeScript : MonoBehaviour
 {
-    AudioSource source;
+    StudioEventEmitter emitter;
+    //AudioSource source;
     KilledByItToSpawn killScript;
     public AudioClip[] clips;
     int id = 0;
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
-        killScript = GetComponent<KilledByItToSpawn>();
+        emitter = GetComponentInChildren<StudioEventEmitter>();
+           //source = GetComponent<AudioSource>();
+           killScript = GetComponent<KilledByItToSpawn>();
     }
 
     public void killScriptVisible(bool isVisible)
@@ -21,7 +24,9 @@ public class HoeScript : MonoBehaviour
     }
     public void playSound()
     {
-        source.PlayOneShot(clips[id]);
+        emitter.Play();
+        //AudioManager.Instance.playHoeSwing();
+        //source.PlayOneShot(clips[id]);
         id = 1 - id;
     }
     // Update is called once per frame

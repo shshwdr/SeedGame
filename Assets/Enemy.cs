@@ -40,7 +40,16 @@ public class Enemy : MonoBehaviour
     {
         if (collision.GetComponent<PlayerMovement>())
         {
-            AudioManager.Instance.playInsect();
+            //AudioManager.Instance.playInsect();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.GetComponent<PlayerMovement>())
+        {
+            //AudioManager.Instance.playInsect();
         }
     }
 }

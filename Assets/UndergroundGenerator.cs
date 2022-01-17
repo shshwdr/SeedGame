@@ -45,6 +45,8 @@ public class UndergroundGenerator : MonoBehaviour
 
         if (toUnderground && isTriggering && isGetDownKey)
         {
+            //AudioManager.Instance.playTunnelDown();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Tunnel/Tunnel Go Down");
             player.transform.position = spawnPosition.position;
             player.GetComponent<Rigidbody2D>().gravityScale = 0;
             player.GetComponent<PlayerMovement>().isUnderground = true;
@@ -59,6 +61,8 @@ public class UndergroundGenerator : MonoBehaviour
         else if (!toUnderground && isTriggering && isGetUpKey)
         {
 
+            //AudioManager.Instance.playTunnelUp();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Tunnel/Tunnel Go Up");
             player.transform.position = spawnPosition.position;
             player.GetComponent<Rigidbody2D>().gravityScale = 1;
             player.GetComponent<PlayerMovement>().isUnderground = false;

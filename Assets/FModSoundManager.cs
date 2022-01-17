@@ -14,6 +14,8 @@ public class FModSoundManager : Singleton<FModSoundManager>
     float defaultVolumn = 1f;
     bool pressedStart = false;
 
+    
+
 
     //[FMODUnity.EventRef]
     //public string eventName;

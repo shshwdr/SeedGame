@@ -21,8 +21,8 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = false;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
-	[SerializeField] private float footstepTime;
-	float footstepTimer;
+	[SerializeField] public  float footstepTime;
+	public float footstepTimer;
 
 	[Header("Events")]
 	[Space]
@@ -82,7 +82,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		if (m_Rigidbody2D.velocity.magnitude>footStepMakeSoundMinDistance && m_Grounded)
+		if (m_Rigidbody2D.velocity.magnitude>footStepMakeSoundMinDistance && m_Grounded && !GetComponent<PlayerMovement>().isDead)
 		{
 			if (footstepTimer > footstepTime)
 			{

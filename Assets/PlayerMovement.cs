@@ -26,6 +26,8 @@ public class PlayerMovement : SerializableObject
     public Collider2D colliderChild;
     public Collider2D colliderTopdown;
 
+    public float footStepMakeSoundMinDistance;
+
     List<GameObject> activePositions;
     public CinemachineVirtualCamera cineCam;
     public GameObject spawnPositions;
@@ -189,7 +191,20 @@ public class PlayerMovement : SerializableObject
         {
 
             //animator.SetBool("underground", true);
-            rb.MovePosition(rb.position + movement * undergroundSpeed * Time.fixedDeltaTime);
+            var moveDis = movement * undergroundSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(rb.position + moveDis);
+            var characterController = GetComponent<CharacterController2D>();
+            if (moveDis.magnitude > footStepMakeSoundMinDistance && !GetComponent<PlayerMovement>().isDead)
+            {
+                if (characterController.footstepTimer > characterController.footstepTime)
+                {
+                    characterController.OnStepEvent.Invoke();
+                    characterController.footStepEmitter.Play();
+                    characterController.footstepTimer = 0;
+                }
+
+                characterController.footstepTimer += Time.deltaTime;
+            }
             //flip
         }
         else
@@ -265,6 +280,7 @@ public class PlayerMovement : SerializableObject
     }
     public void Respawn()
     {
+        AudioManager.Instance.playSeedRespawn();
         transform.position = activePositions[currentSpawnPoint].transform.position;
         isDead = false;
         isFullyDead = false;

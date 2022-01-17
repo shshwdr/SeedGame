@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SettingsController : MonoBehaviour
 {
-
+    EventInstance snapshot;
     public void OnBackToMenuButton()
     {
         SaveLoadManager.Instance.saveGame();
@@ -15,6 +16,23 @@ public class SettingsController : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void openSetting()
+    {
+        //snapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/Pause");
+        //FMODUnity.RuntimeManager.AttachInstanceToGameObject(snapshot, Transform, Rigidbody);
+        //FMODUnity.RuntimeManager.at
+        //snapshot.start();
+    }
+
+    public void closeSetting()
+    {
+        //snapshot.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+    public void playMenuSound()
+    {
+        AudioManager.Instance.playMenuButton();
     }
 
     // Update is called once per frame

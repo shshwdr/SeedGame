@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 100755036069799973}
   - component: {fileID: 7517670937923617752}
   - component: {fileID: 3545764732779147716}
+  - component: {fileID: 65821281274320612}
   m_Layer: 10
   m_Name: Lotus 1
   m_TagString: Untagged
@@ -49,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -103,6 +105,10 @@ EdgeCollider2D:
   - {x: -3.940979, y: 16.429478}
   - {x: 3.2866552, y: 16.063805}
   - {x: 9.168911, y: 17.355381}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!50 &7517670937923617752
 Rigidbody2D:
   serializedVersion: 4
@@ -141,8 +147,38 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 4.049999, y: -2.3099995}
+  m_LinearOffset: {x: 4.049999, y: -2.3100004}
   m_AngularOffset: 0
+--- !u!114 &65821281274320612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466890871026380112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -388890979
+      Data2: 1141868365
+      Data3: -286561612
+      Data4: 2088451580
+    Path: event:/SFX/Plants/Fall on Lotus_Low
+  Event: 
+  PlayEvent: 9
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &3669371190026046742
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +227,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

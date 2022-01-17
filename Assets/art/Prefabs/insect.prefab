@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8367284477524840692}
   - component: {fileID: 8367284477524840699}
   - component: {fileID: 4304308593409586957}
+  - component: {fileID: 6295658909123758956}
   m_Layer: 0
   m_Name: insect
   m_TagString: Untagged
@@ -52,6 +53,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -99,8 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9582ca52e33d5d34b92af48754a7a6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerName: 
   spawnObject:
   - {fileID: 0}
+  destroyObject: []
   showDeathString:
   - killedByInsect
   - dieUnderground
@@ -110,6 +114,11 @@ MonoBehaviour:
   progressAmount: 0
   useCollider: 1
   destoryPlayerCollider: 1
+  shouldGameEnd: 0
+  gameoverHint: {fileID: 0}
+  makeSoundWhenKill: 0
+  imageToShow: {fileID: 0}
+  plantName: 
 --- !u!50 &8367284477524840693
 Rigidbody2D:
   serializedVersion: 4
@@ -196,3 +205,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.000030517578}
   m_Size: {x: 8.5, y: 16.3}
   m_Direction: 0
+--- !u!114 &6295658909123758956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739109000782469662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -563368729
+      Data2: 1242243461
+      Data3: 631264185
+      Data4: 2106678318
+    Path: event:/SFX/Enemies/Bugs
+  Event: 
+  PlayEvent: 5
+  StopEvent: 6
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 3
+  OverrideMaxDistance: 5
