@@ -6,11 +6,11 @@ Obj/
 UnityGenerated/
 Library/
 Assets/AssetStoreTools*
-builds
-windowsBuild
-build
+/builds/
+/windowsBuild/
+/build/
 Editor/
-buildWindows
+/buildWindows/
 pakcedBuild
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
