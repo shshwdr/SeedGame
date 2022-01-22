@@ -21,7 +21,9 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = false;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
-	[SerializeField] public  float footstepTime;
+	[SerializeField] public float footstepTimeMin;
+	[SerializeField] public float footstepTimeMax;
+	[SerializeField] public float footstepTime;
 	public float footstepTimer;
 
 	[Header("Events")]
@@ -53,6 +55,8 @@ public class CharacterController2D : MonoBehaviour
 			OnCrouchEvent = new BoolEvent();
 
 		k_GroundedRadius = m_GroundCheck.GetComponent<CircleCollider2D>().radius * m_GroundCheck.lossyScale.x;
+
+		footstepTime = Random.Range(footstepTimeMin, footstepTimeMax);
 	}
 
 	public void changeParamByName(string paramName,float paramValue)
@@ -89,6 +93,7 @@ public class CharacterController2D : MonoBehaviour
 				OnStepEvent.Invoke();
 				footStepEmitter.Play();
 				footstepTimer = 0;
+				footstepTime = Random.Range(footstepTimeMin, footstepTimeMax);
 			}
 
 			footstepTimer += Time.deltaTime;

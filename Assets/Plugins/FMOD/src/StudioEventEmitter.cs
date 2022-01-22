@@ -23,6 +23,10 @@ namespace FMODUnity
         public float OverrideMinDistance = -1.0f;
         public float OverrideMaxDistance = -1.0f;
 
+        public float cooldown = -1;
+        float cooldownTimer = 0;
+        public bool dontPlayWhilePlaying;
+
         protected FMOD.Studio.EventDescription eventDescription;
 
         protected FMOD.Studio.EventInstance instance;
@@ -106,6 +110,10 @@ namespace FMODUnity
         {
             if (PlayEvent == gameEvent)
             {
+                if(IsPlaying() && dontPlayWhilePlaying)
+                {
+                    return;
+                }
                 Play();
             }
             if (StopEvent == gameEvent)
@@ -174,6 +182,8 @@ namespace FMODUnity
         
         public void PlayInstance()
         {
+
+            Debug.Log("playInstance" + instance);
             if (!instance.isValid())
             {
                 instance.clearHandle();

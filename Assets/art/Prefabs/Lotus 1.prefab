@@ -232,6 +232,8 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+  cooldown: -1
+  dontPlayWhilePlaying: 1
 --- !u!1 &7370029518216790231
 GameObject:
   m_ObjectHideFlags: 0

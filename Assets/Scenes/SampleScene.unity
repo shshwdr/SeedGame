@@ -5136,6 +5136,8 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+  cooldown: -1
+  dontPlayWhilePlaying: 0
 --- !u!1 &228803115
 GameObject:
   m_ObjectHideFlags: 0
@@ -14299,6 +14301,8 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+  cooldown: -1
+  dontPlayWhilePlaying: 0
 --- !u!114 &735858512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16072,6 +16076,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113474327}
     m_Modifications:
+    - target: {fileID: 3090839896073310912, guid: dccdb0a3e6efd9b489c52b60918f9992,
+        type: 3}
+      propertyPath: dontPlayWhilePlaying
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4123356060543804933, guid: dccdb0a3e6efd9b489c52b60918f9992,
         type: 3}
       propertyPath: m_Distance
@@ -18043,6 +18052,120 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3790996159613790531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &942770500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6321241064201806960, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 153.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806961, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806962, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806973, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: m_Name
+      value: footStepChangeToGrassSquare (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806974, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: Emitters.Array.data[0].Target
+      value: 
+      objectReference: {fileID: 735858511}
+    - target: {fileID: 6321241064201806974, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: Emitters.Array.data[0].Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806975, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: Emitters.Array.data[0].Target
+      value: 
+      objectReference: {fileID: 735858511}
+    - target: {fileID: 6321241064201806975, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: Emitters.Array.data[0].Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321241064201806975, guid: b13c83a2c067d6742b47a6156c741540,
+        type: 3}
+      propertyPath: Emitters.Array.data[0].Params.Array.data[0].Value
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b13c83a2c067d6742b47a6156c741540, type: 3}
 --- !u!1 &947010713
 GameObject:
   m_ObjectHideFlags: 0
@@ -30681,6 +30804,8 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 4
   OverrideMaxDistance: 10
+  cooldown: -1
+  dontPlayWhilePlaying: 0
 --- !u!1001 &1656608521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34690,6 +34815,8 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 15
   OverrideMaxDistance: 35
+  cooldown: -1
+  dontPlayWhilePlaying: 0
 --- !u!1001 &1873842024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39473,7 +39600,7 @@ PrefabInstance:
     - target: {fileID: 926706673922104980, guid: 8be4a73f39eeaff4ca2da3c5ce62aaa6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 926706673922104981, guid: 8be4a73f39eeaff4ca2da3c5ce62aaa6,
         type: 3}
@@ -39610,6 +39737,14 @@ PrefabInstance:
       propertyPath: footStepEmitter
       value: 
       objectReference: {fileID: 735858511}
+    - target: {fileID: 1541748589, guid: 3778b0c28c9d8604a9c15e980bdf5199, type: 3}
+      propertyPath: footstepTimeMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541748589, guid: 3778b0c28c9d8604a9c15e980bdf5199, type: 3}
+      propertyPath: footstepTimeMin
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 1541748589, guid: 3778b0c28c9d8604a9c15e980bdf5199, type: 3}
       propertyPath: OnStepEventReference.Path
       value: event:/SFX/Seed/Footsteps

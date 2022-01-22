@@ -130,7 +130,12 @@ public class Dialogues : Singleton<Dialogues>
 
     public void hideGameOverText()
     {
-        AudioManager.Instance.playEndMessage();
+        if(gameoverText.text.Contains("The seed has now completed its journey"))
+        {
+            AudioManager.Instance.playEndMessage();
+        }
+
+
         hideText(gameoverText);
         joystick.SetActive(true);
         jumpButton.SetActive(true);
