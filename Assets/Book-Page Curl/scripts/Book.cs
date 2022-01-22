@@ -199,6 +199,7 @@ public class Book : MonoBehaviour {
         Shadow.transform.SetParent(ClippingPlane.transform, true);
         Shadow.transform.localPosition = Vector3.zero;
         Shadow.transform.localEulerAngles = Vector3.zero;
+        //next page is the page that will show next
         Right.transform.SetParent(ClippingPlane.transform, true);
 
         Left.transform.SetParent(BookPanel.transform, true);
@@ -289,6 +290,7 @@ public class Book : MonoBehaviour {
         NextPageClip.rectTransform.pivot = new Vector2(0, 0.12f);
         ClippingPlane.rectTransform.pivot = new Vector2(1, 0.35f);
 
+        //update left page to current page
         Left.gameObject.SetActive(true);
         Left.rectTransform.pivot = new Vector2(0, 0);
         Left.transform.position = RightNext.transform.position;
@@ -297,7 +299,7 @@ public class Book : MonoBehaviour {
         Left.transform.SetAsFirstSibling();
         Left.GetComponentInChildren<PlantPagesController>().init(currentPage);
 
-
+        //update right page to next page
         Right.gameObject.SetActive(true);
         Right.transform.position = RightNext.transform.position;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
