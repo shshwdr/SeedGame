@@ -110,10 +110,6 @@ namespace FMODUnity
         {
             if (PlayEvent == gameEvent)
             {
-                if(IsPlaying() && dontPlayWhilePlaying)
-                {
-                    return;
-                }
                 Play();
             }
             if (StopEvent == gameEvent)
@@ -139,6 +135,11 @@ namespace FMODUnity
 
         public void Play()
         {
+
+            if (IsPlaying() && dontPlayWhilePlaying)
+            {
+                return;
+            }
             if (TriggerOnce && hasTriggered)
             {
                 return;

@@ -13,8 +13,9 @@ public class SerializedGame : CSSerializedObject
     public SerializedDictionary<string, bool> plantUnlocked;
     public SerializedDictionary<string, bool> plantHinted;
     public SerializedDictionary<string, bool> isTriggered;
-
+    public bool isTutorialHidden;
     public float musicParam;
+    public bool isGameFinished;
 }
 public class SaveLoadManager : Singleton<SaveLoadManager>
 {

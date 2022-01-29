@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 4c414dc23fe62084f973a7c9eed7e1a3
+labels:
+- API
+- Board
+- Bug
+- Bugs
+- Card
+- Debug
+- Debugging
+- Integration
+- List
+- Screenshot
+- Screenshots
+- Tracking
+- Trello
+- alpha
+- beta
+- data
+- log
+- logfile
+- open
+- playtest
+- playtester
+- report
+- reports
+timeCreated: 1478731326
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

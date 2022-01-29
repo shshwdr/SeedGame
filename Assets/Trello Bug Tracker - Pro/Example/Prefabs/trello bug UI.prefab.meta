@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 03d5671a3011ccd4db705f41d6cb7735
+labels:
+- API
+- Alpha
+- Beta
+- Board
+- Bug
+- Bugs
+- Card
+- Debug
+- Debugging
+- Integration
+- List
+- Screenshot
+- Screenshots
+- Tracking
+- Trello
+timeCreated: 1492549277
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

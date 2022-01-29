@@ -35,11 +35,14 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
         });
         supportButton.onClick.AddListener(delegate {
 
+            AdsManager.Instance.Load();
             PopupDialogue.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
             {
                 Debug.Log("pop up for hint");
                 isActive = true;
                 AdsManager.Instance.ShowAd(this);
+
+               // PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
             });
 
         });

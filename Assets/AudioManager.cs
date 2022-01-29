@@ -36,6 +36,30 @@ public class AudioManager : Singleton<AudioManager>
     public EventReference endMessage;
 
 
+
+    public EventReference openBook;
+
+    public EventReference closeBook;
+
+    public EventReference turnPage;
+
+
+    public void playOpenBook()
+    {
+
+        RuntimeManager.PlayOneShot(openBook);
+    }
+    public void playCloseBook()
+    {
+
+        RuntimeManager.PlayOneShot(closeBook);
+    }
+    public void playTurnPage()
+    {
+
+        RuntimeManager.PlayOneShot(turnPage);
+    }
+
     void initVolume(string groupName)
     {
         var finalString = "bus:/" + groupName;

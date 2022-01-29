@@ -104,16 +104,12 @@ PrefabInstance:
     - target: {fileID: 666900853128597288, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'Nelumbo nucifera, also known as lotus, is one of two extant species
-        of aquatic plant in the family Nelumbonaceae. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'This is a hint about how to get lotus:
-
-        Jump into the river!
-        gogogogo!'
+      value: Find me at the beginning!
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -249,16 +245,12 @@ PrefabInstance:
     - target: {fileID: 666900853128597288, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'Nelumbo nucifera, also known as lotus, is one of two extant species
-        of aquatic plant in the family Nelumbonaceae. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'This is a hint about how to get lotus:
-
-        Jump into the river!
-        gogogogo!'
+      value: Find me on the farm.
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -394,16 +386,12 @@ PrefabInstance:
     - target: {fileID: 666900853128597288, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'Nelumbo nucifera, also known as lotus, is one of two extant species
-        of aquatic plant in the family Nelumbonaceae. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'This is a hint about how to get lotus:
-
-        Jump into the river!
-        gogogogo!'
+      value: Find me jumping from the highest of the tree.
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -539,16 +527,12 @@ PrefabInstance:
     - target: {fileID: 666900853128597288, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'Nelumbo nucifera, also known as lotus, is one of two extant species
-        of aquatic plant in the family Nelumbonaceae. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'This is a hint about how to get lotus:
-
-        Jump into the river!
-        gogogogo!'
+      value: Find me on the left of the river.
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -669,7 +653,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d0e4aa04fedb3f42b27fa61a5ffdbe2,
+      objectReference: {fileID: 21300000, guid: 44cd8813f215187458a3351fa4df5dea,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d0fb8e58cc28441bd00763d47074f1, type: 3}
@@ -689,16 +673,12 @@ PrefabInstance:
     - target: {fileID: 666900853128597288, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'Nelumbo nucifera, also known as lotus, is one of two extant species
-        of aquatic plant in the family Nelumbonaceae. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'This is a hint about how to get lotus:
-
-        Jump into the river!
-        gogogogo!'
+      value: Fint me in the river
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -833,16 +813,12 @@ PrefabInstance:
     - target: {fileID: 666900853128597288, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'Nelumbo nucifera, also known as lotus, is one of two extant species
-        of aquatic plant in the family Nelumbonaceae. '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: 'This is a hint about how to get lotus:
-
-        Jump into the river!
-        gogogogo!'
+      value: Find me underground.
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}

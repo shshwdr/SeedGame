@@ -81,8 +81,10 @@ public class KilledByItToSpawn : GameTrigger
 
     IEnumerator fullyKill()
     {
+        Dialogues.Instance.StartCoroutine(Dialogues.Instance. showGameOverTextWithTimeDelay(showDeathString, imageToShow, 3f));
         yield return new WaitForSeconds(1.5f);
         bool isSettingActive = false;
+
         foreach (var ob in spawnObject)
         {
 
@@ -91,12 +93,15 @@ public class KilledByItToSpawn : GameTrigger
                 isSettingActive = true;
             }
         }
+        trigger();
         if (isSettingActive)
         {
 
             PlantManager.Instance.addProgress(progressAmount);
 
         }
+
+
         if (!isSettingActive)
         {
             foreach (var dd in showDeathString)
@@ -121,8 +126,6 @@ public class KilledByItToSpawn : GameTrigger
             
         }
 
-        Dialogues.Instance.showGameOverText(showDeathString, imageToShow);
-        trigger();
 
 
         SaveLoadManager.Instance.saveGame();
@@ -131,6 +134,7 @@ public class KilledByItToSpawn : GameTrigger
         if (shouldGameEnd)
         {
             player.gameFinished = true;
+
             gameoverHint.SetActive(true);
         }
     }

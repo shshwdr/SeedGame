@@ -2,9 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
-public class Dialogues : Singleton<Dialogues>
+public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
 {
     static public Dictionary<string,string> dialogues = new Dictionary<string, string>()
     {
@@ -28,7 +29,7 @@ public class Dialogues : Singleton<Dialogues>
         {"spawnWheat","\nIts death is not in vain, as it has grown into wheat and is now being farmed by humans." },
 
         {"increaseProgress","\nThe progress of spreading throughout the world has increased." },
-        {"toRestart","\nPress R to respawn." },
+        {"toRestart","\nTap to respawn." },
         {"keepPlaying","\nThanks for playing. You may keep exploring the game." },
         {"toUnderground","Down arrow\n\nGo underground" },
         {"toUpperground","Up arrow\n\nGo to the surface" },
@@ -64,6 +65,10 @@ public class Dialogues : Singleton<Dialogues>
 
     public GameObject joystick;
     public GameObject jumpButton;
+
+
+    public GameObject supportPanel;
+    public Button supportButton;
 
     public void showText(Text te, string[] dialogTitles)
     {
@@ -108,6 +113,11 @@ public class Dialogues : Singleton<Dialogues>
         showText(actionText, new string[] { dialogTitle });
     }
 
+    public void showSupportButton()
+    {
+        supportPanel.SetActive(true);
+    }
+
     public void hideActionText()
     {
         hideText(actionText);
@@ -115,6 +125,11 @@ public class Dialogues : Singleton<Dialogues>
     public void showGameOverText(string dialogTitle)
     {
         showGameOverText(new string[] { dialogTitle });
+    }
+    public IEnumerator showGameOverTextWithTimeDelay(string[] dialogTitle, GameObject imageToShow = null,float delayTime=1.5f)
+    {
+        yield return new WaitForSeconds(delayTime);
+        showGameOverText(dialogTitle, imageToShow);
     }
     public void showGameOverText(string[] dialogTitle, GameObject imageToShow = null)
     {
@@ -126,11 +141,18 @@ public class Dialogues : Singleton<Dialogues>
             imageToShow.SetActive(true);
             imageToShowBefore = imageToShow;
         }
+
+        if (gameoverText.text.Contains("Thanks for playing") || TriggersManager.Instance.isGameFinished)
+        {
+            showSupportButton();
+            TriggersManager.Instance.isGameFinished = true;
+
+        }
     }
 
     public void hideGameOverText()
     {
-        if(gameoverText.text.Contains("The seed has now completed its journey"))
+        if(gameoverText.text.Contains("Thanks for playing"))
         {
             AudioManager.Instance.playEndMessage();
         }
@@ -153,6 +175,53 @@ public class Dialogues : Singleton<Dialogues>
         gameOverButton.onClick.AddListener(delegate {
             EventPool.Trigger("clickGameOver");
             });
+
+        supportButton.onClick.AddListener(delegate {
+
+            AdsManager.Instance.Load();
+            PopupDialogue.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
+            {
+                Debug.Log("pop up for hint");
+                isActive = true;
+                AdsManager.Instance.ShowAd(this);
+                PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
+            });
+
+        });
+    }
+
+    bool isActive = false;
+
+    public void OnUnityAdsShowClick(string placementId)
+    {
+        Debug.Log("Unity Ads  show click.");
+    }
+
+    public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
+    {
+        if (isActive && placementId.Equals(AdsManager.Instance._unitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        {
+            Debug.Log("Unity Ads Rewarded Ad Completed");
+            // Grant a reward.
+
+
+        }
+        else
+        {
+
+        }
+        isActive = false;
+    }
+
+    public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
+    {
+        isActive = false;
+        Debug.LogError($"Unity Ads Show Failed: {error.ToString()} - {message}");
+    }
+
+    public void OnUnityAdsShowStart(string placementId)
+    {
+        Debug.Log("Unity Ads Start show.");
     }
 
     // Update is called once per frame

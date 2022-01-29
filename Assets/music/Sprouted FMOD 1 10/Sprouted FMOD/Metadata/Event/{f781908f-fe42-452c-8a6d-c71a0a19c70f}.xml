@@ -104,8 +104,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{5688b73d-6bf5-403c-b953-ae0643a77470}" />
 	<object class="MultiSound" id="{d7b0f508-ea76-485d-9f8d-bb39f984163a}">
+		<property name="delayType">
+			<value>0</value>
+		</property>
 		<property name="volume">
-			<value>-5</value>
+			<value>-9</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{21bb70be-a382-4fed-9504-16c9fcafd009}</destination>
@@ -124,6 +127,12 @@
 		<property name="start">
 			<value>1</value>
 		</property>
+		<property name="delayType">
+			<value>0</value>
+		</property>
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{cd9960f6-6ee2-41f5-974a-3e740059b7ba}</destination>
 			<destination>{1188cd1e-5607-4647-b379-443e62ab43a6}</destination>
@@ -140,8 +149,11 @@
 		<property name="start">
 			<value>2</value>
 		</property>
+		<property name="delayType">
+			<value>0</value>
+		</property>
 		<property name="volume">
-			<value>-2</value>
+			<value>-4</value>
 		</property>
 		<property name="playlistMode">
 			<value>1</value>

@@ -40,7 +40,7 @@ namespace FMODUnity
         {
             if (TriggerEvent == gameEvent)
             {
-                TriggerParameters();
+                  TriggerParameters();
             }
         }
 

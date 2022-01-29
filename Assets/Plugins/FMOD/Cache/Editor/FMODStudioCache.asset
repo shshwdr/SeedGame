@@ -133,6 +133,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 34565
+--- !u!114 &-5607239513857211034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Book/Book Open
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Book/Book Open
+  Guid:
+    Data1: 2100481654
+    Data2: 1340174049
+    Data3: -1769609800
+    Data4: 341642467
+  Banks:
+  - {fileID: 6441434881940585720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 750
 --- !u!114 &-3388118888787418598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,12 +276,15 @@ MonoBehaviour:
   - {fileID: 6654692322038127870}
   - {fileID: 8272539154230600506}
   - {fileID: -3388118888787418598}
+  - {fileID: 8340154630597576120}
+  - {fileID: -5607239513857211034}
+  - {fileID: 1460272271546959675}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6441434881940585720}
   StringsBanks:
   - {fileID: 2813448000826643544}
-  cacheTime: 637774154840000000
+  cacheTime: 637784048790000000
   cacheVersion: 10
 --- !u!114 &548372506313661232
 MonoBehaviour:
@@ -283,6 +313,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1460272271546959675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Book/Book Page Turn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Book/Book Page Turn
+  Guid:
+    Data1: -534322187
+    Data2: 1093823992
+    Data3: 1381963908
+    Data4: -2010027624
+  Banks:
+  - {fileID: 6441434881940585720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1189
 --- !u!114 &2813448000826643544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,10 +355,10 @@ MonoBehaviour:
   Path: Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637774154840000000
+  lastModified: 637784048790000000
   FileSizes:
   - Name: Desktop
-    Value: 1894
+    Value: 2026
   Exists: 1
 --- !u!114 &3009225120793964950
 MonoBehaviour:
@@ -563,10 +620,10 @@ MonoBehaviour:
   Path: Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637774154840000000
+  lastModified: 637784048790000000
   FileSizes:
   - Name: Desktop
-    Value: 8763648
+    Value: 8827296
   Exists: 1
 --- !u!114 &6654692322038127870
 MonoBehaviour:
@@ -646,6 +703,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1714
+--- !u!114 &8340154630597576120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Book/Book Close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Book/Book Close
+  Guid:
+    Data1: -1939849674
+    Data2: 1129492266
+    Data3: 1698764720
+    Data4: 1684331348
+  Banks:
+  - {fileID: 6441434881940585720}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 384
 --- !u!114 &8383285992743462920
 MonoBehaviour:
   m_ObjectHideFlags: 0

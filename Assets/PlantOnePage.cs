@@ -20,7 +20,7 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
         {
 
             plantImage.color = Color.white;
-            plantHintLabel.gameObject.SetActive(true);
+            plantHintLabel.gameObject.SetActive(false);
             plantDescriptionLabel.gameObject.SetActive(true);
             plantHintButton.gameObject.SetActive(false);
         }
@@ -35,6 +35,7 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
 
     public void clickHintButton()
     {
+        AdsManager.Instance.Load();
         PopupDialogue.createPopupDialogue(Dialogues.dialogues["hintDialog"], () =>
          {
              Debug.Log("pop up for hint");

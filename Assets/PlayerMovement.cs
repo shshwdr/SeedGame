@@ -37,6 +37,10 @@ public class PlayerMovement : SerializableObject
     public bool gameFinished;
     public bool usingJoyStick = true;
     public VariableJoystick variableJoystick;
+    public GameObject tutorialPanel;
+    bool isTutorialHidden = false;
+    bool hasMoved = false;
+    bool hasJumped = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -67,6 +71,7 @@ public class PlayerMovement : SerializableObject
             save.playerPosition = new SerializedVector(transform.position);
         }
         save.isPlayerUnderground = isUnderground;
+        save.isTutorialHidden = isTutorialHidden;
     }
 
     public override void Load(SerializedGame save)
@@ -79,6 +84,12 @@ public class PlayerMovement : SerializableObject
         {
             FModSoundManager.Instance.SetParam("Underground", 0.96f);
             GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
+        isTutorialHidden = save.isTutorialHidden;
+        if (isTutorialHidden)
+        {
+            hideTutorial(0);
+            hideTutorial(1);
         }
     }
 
@@ -162,6 +173,10 @@ public class PlayerMovement : SerializableObject
 
             movement = Vector2.ClampMagnitude(movement, 1);
         }
+        if (speed >= 0.01)
+        {
+            hideTutorial(0);
+        }
         animator.SetFloat("speed", speed);
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
@@ -176,10 +191,29 @@ public class PlayerMovement : SerializableObject
         //    crouch = false;
         //};
     }
+
+    public void hideTutorial(int i)
+    {
+        if(i == 0)
+        {
+            hasMoved = true;
+        }
+        if(i == 1)
+        {
+
+            hasJumped = true;
+        }
+        if(hasMoved && hasJumped)
+        {
+            isTutorialHidden = true;
+            tutorialPanel.SetActive(false);
+        }
+    }
     public void Jump()
     {
 
         jump = true;
+        hideTutorial(1);
     }
     public void OnLanding()
     {
@@ -218,7 +252,11 @@ public class PlayerMovement : SerializableObject
     public void FullyDie()
     {
         isFullyDead = true;
+
+        controller.footStepParamChanger.TriggerParameters();
     }
+
+
 
     public void Die(bool destoryPlayerCollider = true)
     {

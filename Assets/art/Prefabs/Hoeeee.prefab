@@ -61,6 +61,8 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 7
   OverrideMaxDistance: 20
+  cooldown: -1
+  dontPlayWhilePlaying: 0
 --- !u!1 &919288694602960634
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +228,7 @@ MonoBehaviour:
   gameoverHint: {fileID: 0}
   makeSoundWhenKill: 0
   imageToShow: {fileID: 0}
-  plantName: 
+  plantName: wheat
 --- !u!114 &919288694602960515
 MonoBehaviour:
   m_ObjectHideFlags: 0

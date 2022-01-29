@@ -24,10 +24,12 @@ public class SettingsController : MonoBehaviour
         //FMODUnity.RuntimeManager.AttachInstanceToGameObject(snapshot, Transform, Rigidbody);
         //FMODUnity.RuntimeManager.at
         //snapshot.start();
+        Time.timeScale = 0;
     }
 
     public void closeSetting()
     {
+        Time.timeScale = 1;
         //snapshot.stop(STOP_MODE.ALLOWFADEOUT);
     }
     public void playMenuSound()

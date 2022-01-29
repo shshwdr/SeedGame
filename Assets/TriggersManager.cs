@@ -6,6 +6,7 @@ public class TriggersManager : Singleton<TriggersManager>
 {
     Dictionary<string, GameTrigger> triggerDict = new Dictionary<string, GameTrigger>();
     public Dictionary<string, bool> isTriggered = new Dictionary<string, bool>();
+    public bool isGameFinished = false;
     
     public void addTrigger(GameTrigger trigger)
     {
@@ -30,6 +31,7 @@ public class TriggersManager : Singleton<TriggersManager>
     {
         base.Save(save);
         save.isTriggered = isTriggered;
+        save.isGameFinished = isGameFinished;
     }
     public override void Load(SerializedGame save)
     {
@@ -43,6 +45,7 @@ public class TriggersManager : Singleton<TriggersManager>
                 triggerDict[trigger].trigger();
             }
         }
+        isGameFinished = save.isGameFinished;
     }
 
     // Start is called before the first frame update

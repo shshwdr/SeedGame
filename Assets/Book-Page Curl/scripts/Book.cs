@@ -6,6 +6,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FMODUnity;
+
 public enum FlipMode
 {
     RightToLeft,
@@ -22,6 +24,7 @@ public class Book : MonoBehaviour {
     public Sprite bookPage;
     public bool interactable=true;
     public bool enableShadowEffect=true;
+    public StudioEventEmitter turnPageEmitter;
     //represent the index of the sprite shown in the right page
     public int currentPage = 0;
     public int TotalPageCount
@@ -53,6 +56,8 @@ public class Book : MonoBehaviour {
     public Image RightNext;
     public UnityEvent OnFlip;
     float radius1, radius2;
+
+    float previousFollowPositionX = 0;
     //Spine Bottom
     Vector3 sb;
     //Spine Top
@@ -157,6 +162,13 @@ public class Book : MonoBehaviour {
     }
     public void UpdateBookLTRToPoint(Vector3 followLocation)
     {
+        //Debug.Log("book turn to " + followLocation);
+        if(followLocation.x * previousFollowPositionX < 0)
+        {
+            AudioManager.Instance.playTurnPage();
+            //turnPageEmitter.Play();
+        }
+        previousFollowPositionX = followLocation.x;
         mode = FlipMode.LeftToRight;
         f = followLocation;
         ShadowLTR.transform.SetParent(ClippingPlane.transform, true);
@@ -194,6 +206,12 @@ public class Book : MonoBehaviour {
     }
     public void UpdateBookRTLToPoint(Vector3 followLocation)
     {
+        if (followLocation.x * previousFollowPositionX < 0)
+        {
+            AudioManager.Instance.playTurnPage();
+        }
+        previousFollowPositionX = followLocation.x;
+        //Debug.Log("book turn to " + followLocation);
         mode = FlipMode.RightToLeft;
         f = followLocation;
         Shadow.transform.SetParent(ClippingPlane.transform, true);

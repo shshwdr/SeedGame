@@ -97,7 +97,7 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
             Debug.LogError("ad no initialized");
         }
         // Load another ad:
-        AdsManager.Instance.Load();
+        //AdsManager.Instance.Load();
     }
 
     // Start is called before the first frame update

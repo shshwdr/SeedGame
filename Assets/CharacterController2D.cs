@@ -33,6 +33,7 @@ public class CharacterController2D : MonoBehaviour
 	public UnityEvent OnStepEvent;
 
 	public StudioEventEmitter footStepEmitter;
+	public StudioParameterTrigger footStepParamChanger;
 	public float footStepMakeSoundMinDistance = 0.3f;
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }

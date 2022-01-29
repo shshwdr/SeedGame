@@ -10,10 +10,12 @@ public class HUDController : MonoBehaviour
     public void ShowBook()
     {
         Book.SetActive(true);
+        AudioManager.Instance.playOpenBook();
     }
     public void HideBook()
     {
         Book.SetActive(false);
+        AudioManager.Instance.playCloseBook();
     }
     // Start is called before the first frame update
     void Start()
