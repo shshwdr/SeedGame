@@ -12,6 +12,11 @@ public class ScrollScript : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
+        var image = GetComponentInChildren<SpriteRenderer>();
+        //length = image.sprite.bounds.max.x;
+        //var length2 = image.sprite.bounds.min.x;
+        //length = 64 / 3;
+        //Debug.Log("length " + length+" "+ length2);
         length = 18.92f;
     }
 

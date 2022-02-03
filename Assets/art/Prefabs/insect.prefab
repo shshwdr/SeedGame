@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1298736033
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 16a9941bc06bfd44ea85152287ea9b1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a95b7712223e3849b3064de50faada3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -235,3 +235,5 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 3
   OverrideMaxDistance: 5
+  cooldown: -1
+  dontPlayWhilePlaying: 0
