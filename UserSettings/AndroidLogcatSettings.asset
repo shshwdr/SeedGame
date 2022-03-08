@@ -3,29 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "53F5T19318002403",
         "name": "com.flavedo.Sprouted",
-        "processId": 9842,
+        "processId": 10294,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.huawei.android.launcher",
-            "processId": 2928,
-            "exited": false
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.DefaultCompany.Sprouted",
-            "processId": 31561,
-            "exited": true
-        },
-        {
-            "deviceId": "53F5T19318002403",
-            "name": "com.flavedo.Sprouted",
-            "processId": 20870,
-            "exited": true
-        },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
@@ -48,12 +30,24 @@
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
             "processId": 8870,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
             "processId": 9842,
+            "exited": true
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.taptap",
+            "processId": 4283,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 10294,
             "exited": false
         }
     ],

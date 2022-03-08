@@ -501,7 +501,7 @@ PrefabInstance:
     - target: {fileID: 7510502332505809504, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_Name
-      value: tree
+      value: sprout
       objectReference: {fileID: 0}
     - target: {fileID: 8731439356976469123, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
