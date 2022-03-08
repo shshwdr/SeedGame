@@ -21,7 +21,8 @@ public class Book : MonoBehaviour {
     public Sprite background;
     public GameObject pages;
     int pageCount;
-    public Sprite bookPage;
+    public Sprite bookPageLeft;
+    public Sprite bookPageRight;
     public bool interactable=true;
     public bool enableShadowEffect=true;
     public StudioEventEmitter turnPageEmitter;
@@ -313,7 +314,7 @@ public class Book : MonoBehaviour {
         Left.rectTransform.pivot = new Vector2(0, 0);
         Left.transform.position = RightNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage < pageCount) ? bookPage : background;
+        Left.sprite = bookPageRight;
         Left.transform.SetAsFirstSibling();
         Left.GetComponentInChildren<PlantPagesController>().init(currentPage);
 
@@ -321,10 +322,10 @@ public class Book : MonoBehaviour {
         Right.gameObject.SetActive(true);
         Right.transform.position = RightNext.transform.position;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
-        Right.sprite = (currentPage < pageCount - 1) ? bookPage : background;
+        Right.sprite = bookPageLeft;
         Right.GetComponentInChildren<PlantPagesController>().init(currentPage+1);
 
-        RightNext.sprite = (currentPage < pageCount - 2) ? bookPage : background;
+        RightNext.sprite = bookPageRight;
         RightNext.GetComponentInChildren<PlantPagesController>().init(currentPage + 2);
 
         LeftNext.transform.SetAsFirstSibling();
@@ -349,7 +350,7 @@ public class Book : MonoBehaviour {
 
         Right.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
-        Right.sprite = bookPage; ;
+        Right.sprite = bookPageLeft;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
         Right.transform.SetAsFirstSibling();
 
@@ -359,10 +360,10 @@ public class Book : MonoBehaviour {
         Left.rectTransform.pivot = new Vector2(1, 0);
         Left.transform.position = LeftNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage >= 2) ? bookPage : background;
+        Left.sprite = bookPageRight;
         Left.GetComponentInChildren<PlantPagesController>().init(currentPage - 2);
 
-        LeftNext.sprite = (currentPage >= 3) ? bookPage : background;
+        LeftNext.sprite = bookPageLeft;
         LeftNext.GetComponentInChildren<PlantPagesController>().init(currentPage - 3);
 
         RightNext.transform.SetAsFirstSibling();
@@ -398,8 +399,8 @@ public class Book : MonoBehaviour {
     Coroutine currentCoroutine;
     void UpdateSprites()
     {
-        LeftNext.sprite= (currentPage > 0 && currentPage <= pageCount) ? bookPage : background;
-        RightNext.sprite=(currentPage>=0 &&currentPage< pageCount) ? bookPage : background;
+        LeftNext.sprite= bookPageLeft;
+        RightNext.sprite= bookPageRight;
 
         LeftNext.GetComponentInChildren<PlantPagesController>().init(currentPage - 1);
         RightNext.GetComponentInChildren<PlantPagesController>().init(currentPage);
