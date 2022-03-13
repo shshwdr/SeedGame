@@ -187,7 +187,7 @@ MonoBehaviour:
   _iosInterstitial: Interstitial_iOS
   _androidInterstitial: Interstitial_Android
   _interstitialId: 
-  testMode: 1
+  testMode: 0
 --- !u!1 &137579601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1133801241354959238, guid: c7befb48265eec9488631e0d4004af85,

@@ -10,7 +10,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
     static public Dictionary<string,string> dialogues = new Dictionary<string, string>()
     {
 
-        {"start","The seed wants to spread throughout the world. Help it reach its goal.\n Use arrow key to move." },
+        {"start","The seed wants to spread throughout the world. Help it reach its goal." },
 
         {"killedByChest","The seed has been pierced by a chestnut." },
         {"killedByInsect","The seed has been eaten by an insect." },
@@ -31,8 +31,8 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         {"increaseProgress","\nThe progress of spreading throughout the world has increased." },
         {"toRestart","\nTap to respawn." },
         {"keepPlaying","\nThanks for playing. You may keep exploring the game." },
-        {"toUnderground","Down arrow\n\nGo underground" },
-        {"toUpperground","Up arrow\n\nGo to the surface" },
+        {"toUnderground","Move Down\n\nEnter The Tunnel" }, 
+        {"toUpperground","Move Up\n\nEnter The Tunnel" },
         {"selectSpawn","Left or Right to select spawn point.\nSpace to respawn" },
 
 
@@ -50,7 +50,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         {"hintDialog","Do you want to watch ads to get a hint?" },
         {"thanksDialog","Thanks For supporting us!" },
         {"supportDialog","Do you want to watch ads to support us?" },
-        {"credits","Programmer: Flavedo\nArtist:Sealcat\nComposer:Dieck" },
+        {"credits","Programmer: Flavedo\nArtist: Sealcat\nComposer and Sound Designer: Dieck\nAudio Engine: FMOD Studio by Firelight Technologies Pty Ltd" },
         {"restart","Do you want to clear your previous data and restart the game?" },
 
     };
@@ -179,12 +179,12 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         supportButton.onClick.AddListener(delegate {
 
             AdsManager.Instance.Load();
-            PopupDialogue.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
             {
                 Debug.Log("pop up for hint");
                 isActive = true;
                 AdsManager.Instance.ShowAd(this);
-                PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
+                PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
             });
 
         });

@@ -78,7 +78,7 @@ public class PlayerMovement : SerializableObject
     {
         transform.position = save.playerPosition.GetPos();
         isUnderground = save.isPlayerUnderground;
-
+        colliderTopdown.enabled = isUnderground;
         animator.SetBool("underground", isUnderground);
         if (isUnderground)
         {
@@ -266,10 +266,10 @@ public class PlayerMovement : SerializableObject
         animator.SetBool("jump",false);
         if (destoryPlayerCollider)
         {
-
-            collider.enabled = false;
+            rb.velocity = Vector2.zero;
+            //collider.enabled = false;
             rb.gravityScale = 0;
-            rb.simulated = false;
+            //rb.simulated = false;
         }
     }
 

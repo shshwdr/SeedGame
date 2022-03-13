@@ -7,17 +7,316 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.67ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001F8CB5FC628 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001FBAB185068 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 141)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D301088
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D301088
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D60B928
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D60B928
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000117458F218
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB7DCA0AD0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB7DCA0AA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB7DCA0BA0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB7DCA0C60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F8C96BD348
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump 1', format=5, channels=2, frequency=48000, lengthbytes=4032, lengthpcm=25714, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138824.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000117458F218
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB7DCA0AD0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB7DCA0AA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB7DCA0BA0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB7DCA0C60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F8C96BD348
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump 3', format=5, channels=2, frequency=48000, lengthbytes=3840, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190094.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000117458F218
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB7DCA0AD0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB7DCA0AA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB7DCA0BA0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB7DCA0C60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F8C96BD348
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump 2', format=5, channels=2, frequency=48000, lengthbytes=2848, lengthpcm=15428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.186005.
+[LOG] SystemI::createSound                     : filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001FA9F48B1D8 : node = 000001F8CF3D3BE0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001FB67676E78.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F48B1D8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F8CF3D3CF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 507
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ambience_Surface', format=5, channels=2, frequency=48000, lengthbytes=315808, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025452.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F48B1D8
+[LOG] SoundI::release                          : Ambience_Surface (000001FBF36836B8)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FBF7990D08)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FA8D60B928)
+[LOG] SystemI::createSound                     : filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001FA9F489F48 : node = 000001FC219A4C70
+[LOG] SystemI::createSound                     : add node to async list : head = 000001FB67676E78.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F489F48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FC219A4D80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 507
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ambience_Surface', format=5, channels=2, frequency=48000, lengthbytes=315808, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025452.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F489F48
+[LOG] SoundI::release                          : Ambience_Surface (000001FA9F48B1D8)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FB28536D68)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FA8D302318)
+[LOG] SystemI::createSound                     : filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001FA9F48A458 : node = 000001FC219A34B0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001FB67676E78.  list count = 0
+[LOG] SystemI::createSound                     : filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F48A458
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 000001FA9F48A608 : node = 000001FC219A2D30
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001FB67676E78.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSound                     :     filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001FA9F48A7B8 : node = 000001FC219A4630
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FC219A35C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001FB67676E78.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001FA9F48A968 : node = 000001FC219A2330
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001FB67676E78.  list count = 2
+[LOG] SystemI::createSound                     :     filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001FA9F48ACC8 : node = 000001FC219A3EB0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001FB67676E78.  list count = 3
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sprouted Tier 3', format=5, channels=2, frequency=48000, lengthbytes=1686176, lengthpcm=6076483, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.239469.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F48A458
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F48A608
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FC219A2E40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sprouted Tier 1', format=5, channels=2, frequency=48000, lengthbytes=1149984, lengthpcm=6076483, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.527190.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F48A608
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F48A7B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FC219A4740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sprouted Tier 2', format=5, channels=2, frequency=48000, lengthbytes=1494080, lengthpcm=6076483, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.680221.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F48A7B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F48A968
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FC219A2440
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sprouted Tier 4', format=5, channels=2, frequency=48000, lengthbytes=1576384, lengthpcm=6076483, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.451766.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F48A968
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA9F48ACC8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FC219A3FC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sprouted Tier 5', format=5, channels=2, frequency=48000, lengthbytes=1694464, lengthpcm=6076483, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.439204.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA9F48ACC8
+[LOG] SoundI::release                          : Sprouted Tier 5 (000001FA8E075BD8)
+[LOG] SoundI::release                          :     Sprouted Tier 5 (000001FB285325E8)
+[LOG] SoundI::release                          :     Sprouted Tier 5 (000001FA8D303248)
+[LOG] SoundI::release                          : Sprouted Tier 4 (000001FA8E076B08)
+[LOG] SoundI::release                          :     Sprouted Tier 4 (000001FB28534328)
+[LOG] SoundI::release                          :     Sprouted Tier 4 (000001FA8D303AB8)
+[LOG] SoundI::release                          : Sprouted Tier 2 (000001FA8E077378)
+[LOG] SoundI::release                          :     Sprouted Tier 2 (000001FB28537588)
+[LOG] SoundI::release                          :     Sprouted Tier 2 (000001FA8D301C58)
+[LOG] SoundI::release                          : Sprouted Tier 3 (000001FA8E075F38)
+[LOG] SoundI::release                          :     Sprouted Tier 3 (000001FB28536068)
+[LOG] SoundI::release                          :     Sprouted Tier 3 (000001FA8D3064E8)
+[LOG] SoundI::release                          : Sprouted Tier 1 (000001FA8E076958)
+[LOG] SoundI::release                          :     Sprouted Tier 1 (000001FB28532108)
+[LOG] SoundI::release                          :     Sprouted Tier 1 (000001FA8D301088)
+[LOG] SystemI::createSound                     : filename = Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001F8CF8955F8 : node = 000001FB684F7740
+[LOG] SystemI::createSound                     : add node to async list : head = 000001FB67676E78.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F8CF8955F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/music/Sprouted FMOD 1 10/Sprouted FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FB684F7850
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 507
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ambience_Surface', format=5, channels=2, frequency=48000, lengthbytes=315808, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025452.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F8CF8955F8
+[LOG] SoundI::release                          : Ambience_Surface (000001FA9F489F48)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FB28532788)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FA8D301FB8)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 8783776
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 43520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000117458F218
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB7DCA0AD0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB7DCA0AA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB7DCA0BA0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB7DCA0C60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FBF74CE6B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Seed Breaks', format=5, channels=2, frequency=48000, lengthbytes=34464, lengthpcm=133714, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.371368.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D305C78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D305C78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FBF3682938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FBF3682938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D301748
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D301748
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D306338
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D306338
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D302828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D302828
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA8D306188
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA8D306188
+[LOG] SoundI::release                          : Sprouted Tier 5 (000001FA9F48ACC8)
+[LOG] SoundI::release                          :     Sprouted Tier 5 (000001FB28531C28)
+[LOG] SoundI::release                          :     Sprouted Tier 5 (000001FA8D306188)
+[LOG] SoundI::release                          : Sprouted Tier 4 (000001FA9F48A968)
+[LOG] SoundI::release                          :     Sprouted Tier 4 (000001FB28534CE8)
+[LOG] SoundI::release                          :     Sprouted Tier 4 (000001FA8D302828)
+[LOG] SoundI::release                          : Sprouted Tier 2 (000001FA9F48A7B8)
+[LOG] SoundI::release                          :     Sprouted Tier 2 (000001FB28533148)
+[LOG] SoundI::release                          :     Sprouted Tier 2 (000001FA8D301748)
+[LOG] SoundI::release                          : Sprouted Tier 1 (000001FA9F48A608)
+[LOG] SoundI::release                          :     Sprouted Tier 1 (000001FB28535848)
+[LOG] SoundI::release                          :     Sprouted Tier 1 (000001FA8D305C78)
+[LOG] SoundI::release                          : Sprouted Tier 3 (000001FA9F48A458)
+[LOG] SoundI::release                          :     Sprouted Tier 3 (000001FB285363A8)
+[LOG] SoundI::release                          :     Sprouted Tier 3 (000001FA8D306338)
+[LOG] SoundI::release                          : Ambience_Surface (000001F8CF8955F8)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FBF734A448)
+[LOG] SoundI::release                          :     Ambience_Surface (000001FBF3682938)
+[LOG] SoundI::release                          :  (000001FA9C3D0B58)
+[LOG] SoundI::release                          :     Jump 1 (000001FB2FD0A098)
+[LOG] SoundI::release                          :  (000001FA9C3D0878)
+[LOG] SoundI::release                          :     Jump 2 (000001FB2FD0A238)
+[LOG] SoundI::release                          :  (000001FA9C3D0708)
+[LOG] SoundI::release                          :     Jump 3 (000001FB2FD0A578)
+[LOG] SoundI::release                          :  (000001F8CDE0A178)
+[LOG] SoundI::release                          :     Seed Breaks (000001FBF66779D8)
+[LOG] SoundI::release                          :  (000001FA9C3D0428)
+[LOG] SoundI::release                          :     Hoe Swing (000001FB2FD0A3D8)
+[LOG] SoundI::release                          :  (000001FB5316E318)
+[LOG] SoundI::release                          :     Footsteps_Grass 1 (000001FC21607DC8)
+[LOG] SoundI::release                          :  (000001FB5316D1D8)
+[LOG] SoundI::release                          :     Footsteps_Grass 2 (000001FC2160A188)
+[LOG] SoundI::release                          :  (000001FB5316DA78)
+[LOG] SoundI::release                          :     Footsteps_Grass 3 (000001FC216097C8)
+[LOG] SoundI::release                          :  (000001FB5316E5F8)
+[LOG] SoundI::release                          :     Footsteps_Grass 4 (000001FC21608788)
+[LOG] SoundI::release                          :  (000001F8CDE081D8)
+[LOG] SoundI::release                          :     Footsteps_Grass 5 (000001FBF66781F8)
+[LOG] SoundI::release                          :  (000001FB5316E038)
+[LOG] SoundI::release                          :     Footsteps_Grass 6 (000001FC216070C8)
+[LOG] SoundI::release                          :  (000001FB5316D4B8)
+[LOG] SoundI::release                          :     Footsteps_Rubber 1 (000001FC21608108)
+[LOG] SoundI::release                          :  (000001F8CF780AF8)
+[LOG] SoundI::release                          :     Footsteps_Rubber 2 (000001FBF5B0CB08)
+[LOG] SoundI::release                          :  (000001F8CF780988)
+[LOG] SoundI::release                          :     Footsteps_Dirt 1 (000001FB977D8A78)
+[LOG] SoundI::release                          :  (000001FB5316D348)
+[LOG] SoundI::release                          :     Footsteps_Dirt 2 (000001FC216085E8)
+[LOG] SoundI::release                          :  (000001F8CDE08EC8)
+[LOG] SoundI::release                          :     Footsteps_Dirt 3 (000001FBF6678058)
+[LOG] SoundI::release                          :  (000001F8CF780538)
+[LOG] SoundI::release                          :     Footsteps_Dirt 4 (000001FBF5B0C2E8)
+[LOG] SoundI::release                          :  (000001FB5316D628)
+[LOG] SoundI::release                          :     Footsteps_Dirt 5 (000001FBF6677358)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -25,3 +324,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

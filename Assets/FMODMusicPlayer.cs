@@ -97,8 +97,8 @@ public class FMODMusicPlayer : MonoBehaviour
         {
 
             //popup and ask if you really want to restart
-            PopupDialogue.createPopupDialogue(Dialogues.dialogues["restart"], () =>
-            {
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["restart"], () =>
+            { 
                 Debug.Log("restart");
                 SaveLoadManager.clearSavedData();
                 gotoNextLevel();

@@ -36,7 +36,7 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
         supportButton.onClick.AddListener(delegate {
 
             AdsManager.Instance.Load();
-            PopupDialogue.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
             {
                 Debug.Log("pop up for hint");
                 isActive = true;
@@ -47,7 +47,7 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
 
         });
         creditButton.onClick.AddListener(delegate {
-            PopupDialogue.createPopupDialogue(Dialogues.dialogues["credits"]);
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["credits"],null,"BACK");
 
         });
 
@@ -76,7 +76,7 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
 
-            PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
+            //PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
 
         }
         else

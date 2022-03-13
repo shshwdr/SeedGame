@@ -1,53 +1,71 @@
 {
     "m_SelectedDeviceId": "53F5T19318002403",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "53F5T19318002403",
+        "name": "com.flavedo.Sprouted",
+        "processId": 16592,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "53F5T19318002403",
-            "name": "com.taptap",
-            "processId": 4283,
+            "name": "com.huawei.android.launcher",
+            "processId": 2652,
             "exited": false
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
-            "processId": 19916,
+            "processId": 17010,
             "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
-            "processId": 27810,
+            "processId": 19919,
             "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
-            "processId": 29213,
+            "processId": 20650,
             "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
-            "processId": 2216,
+            "processId": 21472,
             "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
-            "processId": 7765,
+            "processId": 22974,
             "exited": true
         },
         {
             "deviceId": "53F5T19318002403",
-            "name": "com.huawei.android.launcher",
-            "processId": 2652,
+            "name": "com.flavedo.Sprouted",
+            "processId": 23428,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 26306,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 14128,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 16592,
             "exited": false
         }
     ],

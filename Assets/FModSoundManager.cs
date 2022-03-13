@@ -138,6 +138,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
     public void startGame()
     {
         pressedStart = true;
+        Time.timeScale = 1;
     }
 
     public bool hasPreviousGame()
@@ -151,7 +152,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
         {
 
             //popup and ask if you really want to restart
-            PopupDialogue.createPopupDialogue(Dialogues.dialogues["restart"], () =>
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["restart"], () =>
             {
                 Debug.Log("restart");
                 SaveLoadManager.clearSavedData();

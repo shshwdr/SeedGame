@@ -50,6 +50,7 @@ public class UndergroundGenerator : MonoBehaviour
             player.transform.position = spawnPosition.position;
             player.GetComponent<Rigidbody2D>().gravityScale = 0;
             player.GetComponent<PlayerMovement>().isUnderground = true;
+            player.GetComponent<PlayerMovement>().colliderTopdown.enabled = true;
 
             FModSoundManager.Instance.SetParam("Underground", 0.96f);
             player.GetComponent<PlayerMovement>().animator.SetBool("underground", true);
@@ -66,6 +67,7 @@ public class UndergroundGenerator : MonoBehaviour
             player.transform.position = spawnPosition.position;
             player.GetComponent<Rigidbody2D>().gravityScale = 1;
             player.GetComponent<PlayerMovement>().isUnderground = false;
+            player.GetComponent<PlayerMovement>().colliderTopdown.enabled = false;
 
             FModSoundManager.Instance.SetParam("Underground", 0);
             player.GetComponent<PlayerMovement>().animator.SetBool("underground", false);
