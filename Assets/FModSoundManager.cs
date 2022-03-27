@@ -98,9 +98,9 @@ public class FModSoundManager : Singleton<FModSoundManager>
         SetAmbienceParamter(save.musicParam);
     }
 
-    public void SetAmbienceParamter(float param)
+    public void SetAmbienceParamter(float param, bool force = false)
     {
-        if(param<= currentAmbienceIntensity)
+        if(param<= currentAmbienceIntensity && !force)
         {
             return;
         }

@@ -221,6 +221,10 @@ public class PlayerMovement : SerializableObject
     }
     private void FixedUpdate()
     {
+        if (isDead)
+        {
+            return;
+        }
         if (isUnderground)
         {
 

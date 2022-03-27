@@ -87,7 +87,7 @@ public class FMODMusicPlayer : MonoBehaviour
 
     public void gotoNextLevel()
     {
-
+        FModSoundManager.Instance. SetAmbienceParamter(0,true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

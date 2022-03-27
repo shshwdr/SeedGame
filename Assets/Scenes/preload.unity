@@ -2197,6 +2197,7 @@ GameObject:
   - component: {fileID: 1733238587}
   - component: {fileID: 1733238589}
   - component: {fileID: 1733238588}
+  - component: {fileID: 1733238590}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2265,6 +2266,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733238586}
   m_CullTransparentMesh: 0
+--- !u!114 &1733238590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733238586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:688f7b85a156bba498a86b23c84dad48
+      m_Valid: 0
+      <ReferenceType>k__BackingField: 1
+    m_TableEntryReference:
+      m_Key: 
+      m_Valid: 0
+      <ReferenceType>k__BackingField: 2
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocaleOverride: {fileID: 0}
+    m_CurrentTable:
+      m_TableCollectionName: GUID:688f7b85a156bba498a86b23c84dad48
+      m_Valid: 0
+      <ReferenceType>k__BackingField: 1
+    m_CurrentTableEntry:
+      m_Key: 
+      m_Valid: 0
+      <ReferenceType>k__BackingField: 2
+    m_LocalVariables: []
+    m_CurrentStringChangedValue: 
+    m_WaitingForVariablesEndUpdate: 0
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  references:
+    version: 1
 --- !u!1 &1745827318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2490,36 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
+--- !u!1 &2028459535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028459536}
+  m_Layer: 0
+  m_Name: translator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028459536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028459535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070328179
 GameObject:
   m_ObjectHideFlags: 0

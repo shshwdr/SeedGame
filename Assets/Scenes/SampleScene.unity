@@ -8223,7 +8223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81fb600666e68a4387b6b538d32046d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTo: 4
+  changeTo: 3.5
 --- !u!1001 &325519037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18758,7 +18758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81fb600666e68a4387b6b538d32046d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTo: 5
+  changeTo: 4.5
 --- !u!1001 &921757567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24634,7 +24634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1150766995
 Transform:
   m_ObjectHideFlags: 0
@@ -24661,7 +24661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81fb600666e68a4387b6b538d32046d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTo: 1
+  changeTo: 0.5
 --- !u!1001 &1163651399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26054,7 +26054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81fb600666e68a4387b6b538d32046d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTo: 3
+  changeTo: 2.5
 --- !u!1001 &1263875781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28959,7 +28959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81fb600666e68a4387b6b538d32046d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTo: 2
+  changeTo: 1.5
 --- !u!4 &1361223232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1086913144368491169, guid: 3778b0c28c9d8604a9c15e980bdf5199,

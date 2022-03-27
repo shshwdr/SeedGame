@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "53F5T19318002403",
         "name": "com.flavedo.Sprouted",
-        "processId": 16592,
+        "processId": 3409,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -66,6 +66,24 @@
             "deviceId": "53F5T19318002403",
             "name": "com.flavedo.Sprouted",
             "processId": 16592,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 31001,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 32253,
+            "exited": false
+        },
+        {
+            "deviceId": "53F5T19318002403",
+            "name": "com.flavedo.Sprouted",
+            "processId": 3409,
             "exited": false
         }
     ],
