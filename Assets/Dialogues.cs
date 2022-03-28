@@ -154,7 +154,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
             imageToShowBefore = imageToShow;
         }
 
-        if (gameoverText.text.Contains("Thanks for playing") || TriggersManager.Instance.isGameFinished)
+        if (gameoverText.text.Contains("Thanks for playing")|| gameoverText.text.Contains("继续探索这个世界") || TriggersManager.Instance.isGameFinished)
         {
             showSupportButton();
             TriggersManager.Instance.isGameFinished = true;

@@ -5,7 +5,7 @@ New Game,新游戏
 Support Us,支持我们
 Settings,设置
 Credits,制作人员
-The seed has been pierced by a chestnut.,种子被栗子穿透了。
+The seed has been pierced by a chestnut.,种子被毛栗穿透了。
 The seed has been eaten by an insect.,种子被昆虫吃掉了。
 The seed has drowned in the water.,种子在水里淹死了。
 The seed has been cut by a hoe.,种子被斧头砍成两半了。
@@ -19,7 +19,7 @@ The seed has fertilized the ground. You can now explore underground.,种子会�
 "\nIts death is not in vain. The bird takes it to the cliff and drops it there, the seed starts growing into a vine on cliff.",\n它的死亡不是毫无意义。
 "\nIts death is not in vain, as it has grown into various lotus leaves.",\n它的死亡不是毫无意义，它长出了一些莲叶。
 "\nIts death is not in vain, as it has grown into wheat and is now being farmed by humans.",\n它的死亡不是毫无意义，它长出了一些小麦。
-\nThe progress of spreading throughout the world has increased.,\n种子散播到全世界的进程增加了。
+\nThe progress of spreading throughout the world has increased.,\n种子散播到全世界的进程增加了！
 \nTap to respawn.,\n点击重生。
 \nThanks for playing. You may keep exploring the game.,\n感谢玩我们的游戏，你可以继续探索这个世界。
 Move Down\n\nEnter The Tunnel,向下移动\n\n进入隧道
@@ -29,7 +29,7 @@ The ground here looks barren…,这里的土地看起来有些贫瘠……
 The seed can not sprout because it is too deep.,这里太深了，种子没办法在这里发芽。
 The soil is fertilized and a root can now grow better... There might be more space to explore,土地被滋养了，可能产生了更多可以探索的空间。
 "The seed has now completed its journey, as it has spread throughout the world. Thanks for helping it!",种子完成了它的旅程，散播到了世界各地。谢谢你帮助它！
-Do you want to watch ads to get a hint?,你想要看广告得到提示么？
+Do you want to watch ads to get a hint?,想要看广告得到提示么？
 Thanks For supporting us!,谢谢支持！
 Do you want to watch ads to support us?,可以看一个广告来支持我们么？
 Programmer: Flavedo\nArtist: Sealcat\nComposer and Sound Designer: Dieck\nAudio Engine: FMOD Studio by Firelight Technologies Pty Ltd,程序: Flavedo\n美术: Sealcat\n音乐音效: Dieck\n声音引擎: FMOD Studio by Firelight Technologies Pty Ltd
@@ -50,5 +50,7 @@ BACK,返回
 YES,是
 NO,否
 Progress,进度
-Drag To Move,
-Tap To Jump,
+Drag To Move,拖拽移动
+Tap To Jump,点击跳跃
+The seed wants to spread throughout the world. Help it reach its goal.,这颗种子想要散播到世界各地，帮帮它吧！
+The ground here looks barren...,这里的土地看起来有点贫瘠……

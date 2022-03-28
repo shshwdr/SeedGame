@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class TranslationLoader : MonoBehaviour
+public class TranslationLoader : Singleton<TranslationLoader>
 {
 
     private int progress = 0;
