@@ -7,10 +7,21 @@ using UnityEngine.UI;
 
 public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
 {
+
+    static public string getDialog(string key)
+    {
+        if (!dialogues.ContainsKey(key))
+        {
+            Debug.LogError(" no key " + key + "in dialogues");
+            return "";
+        }
+        string dialog = dialogues[key];
+        string translated = Translator.Instance.Translate(dialog);
+        return translated;
+    }
     static public Dictionary<string,string> dialogues = new Dictionary<string, string>()
     {
 
-        {"start","The seed wants to spread throughout the world. Help it reach its goal." },
 
         {"killedByChest","The seed has been pierced by a chestnut." },
         {"killedByInsect","The seed has been eaten by an insect." },
@@ -52,6 +63,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         {"supportDialog","Do you want to watch ads to support us?" },
         {"credits","Programmer: Flavedo\nArtist: Sealcat\nComposer and Sound Designer: Dieck\nAudio Engine: FMOD Studio by Firelight Technologies Pty Ltd" },
         {"restart","Do you want to clear your previous data and restart the game?" },
+        {"BACK","BACK" },
 
     };
 
@@ -83,7 +95,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
                 te.text = "THIS IS A BUG! action title " + d + "DOES NOT EXISTTTTTT!!!";
                 return;
             }
-            dialogTitle += dialogues[d];
+            dialogTitle += getDialog(d);
             if(i != dialogTitles.Length - 1)
             {
 
@@ -179,12 +191,12 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         supportButton.onClick.AddListener(delegate {
 
             AdsManager.Instance.Load();
-            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("supportDialog"), () =>
             {
                 Debug.Log("pop up for hint");
                 isActive = true;
                 AdsManager.Instance.ShowAd(this);
-                PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
+                PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("thanksDialog"));
             });
 
         });

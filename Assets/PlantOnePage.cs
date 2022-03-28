@@ -36,7 +36,7 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
     public void clickHintButton()
     {
         AdsManager.Instance.Load();
-        PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["hintDialog"], () =>
+        PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("hintDialog"), () =>
          {
              Debug.Log("pop up for hint");
              isActive = true;

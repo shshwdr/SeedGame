@@ -109,7 +109,7 @@ PrefabInstance:
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: Find me at the beginning!
+      value: Find me at the beginning
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: Find me on the farm.
+      value: Find me on the farm
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -391,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: Find me jumping from the highest of the tree.
+      value: Find me jumping from the highest of the tree
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -532,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: Find me on the left of the river.
+      value: Find me on the left of the river
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -678,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: Fint me in the river
+      value: Find me in the river
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
@@ -818,7 +818,7 @@ PrefabInstance:
     - target: {fileID: 2014965360232820721, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}
       propertyPath: m_text
-      value: Find me underground.
+      value: Find me underground
       objectReference: {fileID: 0}
     - target: {fileID: 4812323379024996969, guid: d4d0fb8e58cc28441bd00763d47074f1,
         type: 3}

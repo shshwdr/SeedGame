@@ -152,7 +152,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
         {
 
             //popup and ask if you really want to restart
-            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["restart"], () =>
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("restart"), () =>
             {
                 Debug.Log("restart");
                 SaveLoadManager.clearSavedData();

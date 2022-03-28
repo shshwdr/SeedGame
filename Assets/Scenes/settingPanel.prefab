@@ -224,8 +224,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 980cd02ce7320324091d4fde119b24f6, type: 2}
-  m_sharedMaterial: {fileID: -7758880805585494582, guid: 980cd02ce7320324091d4fde119b24f6,
+  m_fontAsset: {fileID: 11400000, guid: 07d67eb9de2bee44a87f597130851ffa, type: 2}
+  m_sharedMaterial: {fileID: -2181374850292613140, guid: 07d67eb9de2bee44a87f597130851ffa,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 130
-  m_fontSizeBase: 130
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -801,20 +801,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1133801241412907186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133801241412907188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373ad088f98cd1b449bf118512c022db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 1133801241496591932}
-  groupName: Music
 --- !u!1 &1133801241525326265
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,8 +868,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 980cd02ce7320324091d4fde119b24f6, type: 2}
-  m_sharedMaterial: {fileID: -7758880805585494582, guid: 980cd02ce7320324091d4fde119b24f6,
+  m_fontAsset: {fileID: 11400000, guid: 07d67eb9de2bee44a87f597130851ffa, type: 2}
+  m_sharedMaterial: {fileID: -2181374850292613140, guid: 07d67eb9de2bee44a87f597130851ffa,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -908,8 +894,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 130
-  m_fontSizeBase: 130
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -950,20 +936,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1133801242164294051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8339815837361892966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373ad088f98cd1b449bf118512c022db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 8339815837313319150}
-  groupName: SFX
 --- !u!1001 &1133801241451206243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1086,6 +1058,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8935397202005058555, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8935397202005058556, guid: cc755bb43c87cac46bc63cbb153ccd7f,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1096,6 +1073,28 @@ PrefabInstance:
       propertyPath: m_text
       value: sfx
       objectReference: {fileID: 0}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 07d67eb9de2bee44a87f597130851ffa,
+        type: 2}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2181374850292613140, guid: 07d67eb9de2bee44a87f597130851ffa,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc755bb43c87cac46bc63cbb153ccd7f, type: 3}
 --- !u!224 &8339815837361892967 stripped
@@ -1122,6 +1121,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1133801241451206243}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1133801242164294051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8339815837361892966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad088f98cd1b449bf118512c022db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 8339815837313319150}
+  groupName: SFX
 --- !u!1001 &8339815837341403313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1294,6 +1307,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8935397202005058555, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8935397202005058556, guid: cc755bb43c87cac46bc63cbb153ccd7f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1311,6 +1329,28 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 07d67eb9de2bee44a87f597130851ffa,
+        type: 2}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935397202614573727, guid: cc755bb43c87cac46bc63cbb153ccd7f,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2181374850292613140, guid: 07d67eb9de2bee44a87f597130851ffa,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc755bb43c87cac46bc63cbb153ccd7f, type: 3}
 --- !u!1 &1133801241412907188 stripped
@@ -1337,3 +1377,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1133801241412907186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133801241412907188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad088f98cd1b449bf118512c022db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1133801241496591932}
+  groupName: Music

@@ -36,7 +36,7 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
         supportButton.onClick.AddListener(delegate {
 
             AdsManager.Instance.Load();
-            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["supportDialog"], () =>
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("supportDialog"), () =>
             {
                 Debug.Log("pop up for hint");
                 isActive = true;
@@ -47,7 +47,7 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
 
         });
         creditButton.onClick.AddListener(delegate {
-            PopupDialogue.Instance.createPopupDialogue(Dialogues.dialogues["credits"],null,"BACK");
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("credits"),null, Dialogues.getDialog("BACK"));
 
         });
 
