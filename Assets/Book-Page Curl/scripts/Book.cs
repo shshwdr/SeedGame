@@ -106,6 +106,7 @@ public class Book : MonoBehaviour {
 
     }
 
+
     private void CalcCurlCriticalPoints()
     {
         sb = new Vector3(0, -BookPanel.rect.height / 2);
@@ -397,7 +398,7 @@ public class Book : MonoBehaviour {
         }
     }
     Coroutine currentCoroutine;
-    void UpdateSprites()
+    public void UpdateSprites()
     {
         LeftNext.sprite= bookPageLeft;
         RightNext.sprite= bookPageRight;

@@ -127,7 +127,7 @@ public class Translator : Singleton<Translator>
             //remove later
             Debug.LogWarning("No translation for: '" + englishTextLower + "'");
             AddStringToListOfTermsToTranslate(englishTextLower);
-            englishTextLower = "<<" + englishTextLower + ">>";
+            //englishTextLower = "<<" + englishTextLower + ">>";
             return englishTextLower;
         }
     }

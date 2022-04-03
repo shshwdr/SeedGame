@@ -12,6 +12,11 @@ public class SettingsController : MonoBehaviour
         SaveLoadManager.Instance.saveGame();
         SceneManager.LoadScene(0);
     }
+    public void respawn()
+    {
+        closeSetting();
+        GameObject.FindObjectOfType<PlayerMovement>().suicide();
+    }
     // Start is called before the first frame update
     void Start()
     {

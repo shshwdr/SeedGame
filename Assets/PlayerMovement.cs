@@ -192,6 +192,15 @@ public class PlayerMovement : SerializableObject
         //};
     }
 
+    public void suicide()
+    {
+
+        Die();
+        FullyDie();
+        prepareSpawnSelection();
+        Respawn();
+    }
+
     public void hideTutorial(int i)
     {
         if(i == 0)

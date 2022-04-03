@@ -10,6 +10,7 @@ public class HUDController : MonoBehaviour
     public void ShowBook()
     {
         Book.SetActive(true);
+        Book.GetComponentInChildren<Book>(true).UpdateSprites();
         AudioManager.Instance.playOpenBook();
     }
     public void HideBook()
