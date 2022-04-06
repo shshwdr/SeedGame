@@ -31,12 +31,12 @@ The soil is fertilized and a root can now grow better... There might be more spa
 "The seed has now completed its journey, as it has spread throughout the world. Thanks for helping it!",种子完成了它的旅程，散播到了世界各地。谢谢你帮助它！
 Do you want to watch ads to get a hint?,想要看广告得到提示么？
 Thanks For supporting us!,谢谢支持！
-Do you want to watch ads to support us?,可以看一个广告来支持我们么？
+Do you want to watch ads to support us?,可以看一个广告来支持我们么？（第一次加载可能比较慢）
 Programmer: Flavedo\nArtist: Sealcat\nComposer and Sound Designer: Dieck\nAudio Engine: FMOD Studio by Firelight Technologies Pty Ltd,程序: Flavedo\n美术: Sealcat\n音乐音效: Dieck\n声音引擎: FMOD Studio by Firelight Technologies Pty Ltd
 Do you want to clear your previous data and restart the game?,是否想要清空之前的进度重新开始？
 Find me in the river,在河里找到我
 Get Hint,提示
-Find me underground,在地下找到我
+Find me underground,在地下死亡过以后右转找到我
 Find me on the left of the river,在河的左边找到我
 Find me at the beginning,在游戏开始找到我
 Find me jumping from the highest of the tree,在树的最高点跳下来找到我
@@ -56,3 +56,4 @@ The seed wants to spread throughout the world. Help it reach its goal.,这颗种
 The ground here looks barren...,这里的土地看起来有点贫瘠……
 Respawn,重生
 Can we fall gently?,如何轻轻的落下呢。。
+This is the end of the road,这是路的终点了

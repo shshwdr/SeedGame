@@ -22,6 +22,8 @@ public class PlantManager : Singleton<PlantManager>
     {
         base.Load(save);
         progress = save.progress;
+
+        progressText.text = progress + " %";
         plantUnlocked = save.plantUnlocked;
         plantHinted = save.plantHinted;
     }

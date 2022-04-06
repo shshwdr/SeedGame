@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "902033402467",
     "m_SelectedPackage": {
-        "deviceId": "902033402467",
-        "name": "com.flavedo.sprouted",
-        "processId": 31341,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -53,20 +53,38 @@
         {
             "deviceId": "902033402467",
             "name": "com.flavedo.sprouted",
-            "processId": 12564,
+            "processId": 30109,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.flavedo.sprouted",
+            "processId": 30540,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.flavedo.sprouted",
+            "processId": 8596,
+            "exited": true
+        },
+        {
+            "deviceId": "902033402467",
+            "name": "com.microsoft.launcher",
+            "processId": 5255,
             "exited": false
         },
         {
             "deviceId": "902033402467",
             "name": "com.flavedo.sprouted",
-            "processId": 30698,
-            "exited": false
+            "processId": 17429,
+            "exited": true
         },
         {
             "deviceId": "902033402467",
-            "name": "com.flavedo.sprouted",
-            "processId": 31341,
-            "exited": false
+            "name": "com.taptap",
+            "processId": 17935,
+            "exited": true
         }
     ],
     "m_Tags": {
