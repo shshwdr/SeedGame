@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "902033402467",
+    "m_SelectedDeviceId": "24358c7d",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "24358c7d",
+        "name": "com.flavedo.sprouted",
+        "processId": 3856,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -85,6 +85,12 @@
             "name": "com.taptap",
             "processId": 17935,
             "exited": true
+        },
+        {
+            "deviceId": "24358c7d",
+            "name": "com.flavedo.sprouted",
+            "processId": 3856,
+            "exited": false
         }
     ],
     "m_Tags": {
