@@ -1,3 +1,4 @@
+using Pool;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -40,7 +41,8 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
          {
              Debug.Log("pop up for hint");
              isActive = true;
-             AdsManager.Instance.ShowAd(this);
+             PangleAdsManager.Instance.plantName = plantName;
+             AdsManager.Instance.ShowAd(gameObject);
          });
 
         //PlantManager.Instance.showPlantHint(plantName);
@@ -49,7 +51,8 @@ public class PlantOnePage : MonoBehaviour, IUnityAdsShowListener
     // Start is called before the first frame update
     void Start()
     {
-        plantHintButton.onClick.AddListener(delegate { clickHintButton(); });
+        plantHintButton.onClick.AddListener(clickHintButton);
+        EventPool.OptIn("updatePlant", init);
     }
 
     // Update is called once per frame

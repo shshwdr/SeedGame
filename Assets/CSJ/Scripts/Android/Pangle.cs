@@ -27,9 +27,9 @@ namespace ByteDance.Union
             var sdkInitCallback = new SdkInitCallback(callback);
             AndroidJavaObject adConfigBuilder = new AndroidJavaObject("com.bytedance.sdk.openadsdk.TTAdConfig$Builder");
             Debug.Log("Pangle InitializeSDK 开始设置config");
-            adConfigBuilder.Call<AndroidJavaObject>("appId", "5001121")
+            adConfigBuilder.Call<AndroidJavaObject>("appId", "5284665")
                 .Call<AndroidJavaObject>("useTextureView", true) //使用TextureView控件播放视频,默认为SurfaceView,当有SurfaceView冲突的场景，可以使用TextureView
-                .Call<AndroidJavaObject>("appName", "APP测试媒体")
+                .Call<AndroidJavaObject>("appName", "发芽啦")
                 .Call<AndroidJavaObject>("allowShowNotify", true) //是否允许sdk展示通知栏提示
                 .Call<AndroidJavaObject>("debug", true) //测试阶段打开，可以通过日志排查问题，上线时去除该调用
                 .Call<AndroidJavaObject>("directDownloadNetworkType",

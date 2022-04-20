@@ -19,7 +19,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         string translated = Translator.Instance.Translate(dialog);
         return translated;
     }
-    static public Dictionary<string,string> dialogues = new Dictionary<string, string>()
+    static public Dictionary<string, string> dialogues = new Dictionary<string, string>()
     {
 
 
@@ -42,7 +42,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
         {"increaseProgress","\nThe progress of spreading throughout the world has increased." },
         {"toRestart","\nTap to respawn." },
         {"keepPlaying","\nThanks for playing. You may keep exploring the game." },
-        {"toUnderground","Move Down\n\nEnter The Tunnel" }, 
+        {"toUnderground","Move Down\n\nEnter The Tunnel" },
         {"toUpperground","Move Up\n\nEnter The Tunnel" },
         {"selectSpawn","Left or Right to select spawn point.\nSpace to respawn" },
 
@@ -86,7 +86,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
     {
         string dialogTitle = "";
         int i = 0;
-        foreach(var d in dialogTitles)
+        foreach (var d in dialogTitles)
         {
 
             if (!dialogues.ContainsKey(d))
@@ -96,14 +96,14 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
                 return;
             }
             dialogTitle += getDialog(d);
-            if(i != dialogTitles.Length - 1)
+            if (i != dialogTitles.Length - 1)
             {
 
                 dialogTitle += "\n";
             }
             i++;
         }
-        if (te.transform.parent. gameObject.active)
+        if (te.transform.parent.gameObject.active)
         {
             te.text = "THIS IS A BUG! Action text " + dialogTitle + " was active!!!";
         }
@@ -138,7 +138,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
     {
         showGameOverText(new string[] { dialogTitle });
     }
-    public IEnumerator showGameOverTextWithTimeDelay(string[] dialogTitle, GameObject imageToShow = null,float delayTime=1.5f)
+    public IEnumerator showGameOverTextWithTimeDelay(string[] dialogTitle, GameObject imageToShow = null, float delayTime = 1.5f)
     {
         yield return new WaitForSeconds(delayTime);
         showGameOverText(dialogTitle, imageToShow);
@@ -154,7 +154,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
             imageToShowBefore = imageToShow;
         }
 
-        if (gameoverText.text.Contains("Thanks for playing")|| gameoverText.text.Contains("继续探索这个世界") || TriggersManager.Instance.isGameFinished)
+        if (gameoverText.text.Contains("Thanks for playing") || gameoverText.text.Contains("继续探索这个世界") || TriggersManager.Instance.isGameFinished)
         {
             showSupportButton();
             TriggersManager.Instance.isGameFinished = true;
@@ -164,7 +164,7 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
 
     public void hideGameOverText()
     {
-        if(gameoverText.text.Contains("Thanks for playing"))
+        if (gameoverText.text.Contains("Thanks for playing"))
         {
             AudioManager.Instance.playEndMessage();
         }
@@ -186,20 +186,22 @@ public class Dialogues : Singleton<Dialogues>, IUnityAdsShowListener
     {
         gameOverButton.onClick.AddListener(delegate {
             EventPool.Trigger("clickGameOver");
-            });
-
-        supportButton.onClick.AddListener(delegate {
-
-            AdsManager.Instance.Load();
-            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("supportDialog"), () =>
-            {
-                Debug.Log("pop up for hint");
-                isActive = true;
-                AdsManager.Instance.ShowAd(this);
-                PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("thanksDialog"));
-            });
-
         });
+
+        supportButton.onClick.AddListener(onSupportButton);
+    }
+
+    void onSupportButton(){
+        
+AdsManager.Instance.Load();
+            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("supportDialog"), onConfirmSupport);
+}
+    void onConfirmSupport()
+    {
+        Debug.Log("pop up for hint");
+        isActive = true;
+        AdsManager.Instance.ShowAd(gameObject);
+        PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("thanksDialog"));
     }
 
     bool isActive = false;

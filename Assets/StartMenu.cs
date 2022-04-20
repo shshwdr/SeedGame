@@ -33,19 +33,7 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
             FModSoundManager.Instance.restartGame();
 
         });
-        supportButton.onClick.AddListener(delegate {
-
-            AdsManager.Instance.Load();
-            PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("supportDialog"), () =>
-            {
-                Debug.Log("pop up for hint");
-                isActive = true;
-                AdsManager.Instance.ShowAd(this);
-
-               // PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
-            });
-
-        });
+        supportButton.onClick.AddListener(onSupportButton);
         creditButton.onClick.AddListener(delegate {
             PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("credits"),null, Dialogues.getDialog("BACK"));
 
@@ -53,8 +41,20 @@ public class StartMenu : MonoBehaviour, IUnityAdsShowListener
 
 
     }
+    void onSupportButton()
+    {
 
-    
+        AdsManager.Instance.Load();
+        PopupDialogue.Instance.createPopupDialogue(Dialogues.getDialog("supportDialog"), () =>
+        {
+            Debug.Log("pop up for hint");
+            isActive = true;
+            AdsManager.Instance.ShowAd(gameObject);
+
+            // PopupDialogue.createPopupDialogue(Dialogues.dialogues["thanksDialog"]);
+        });
+    }
+
 
     // Update is called once per frame
     void Update()

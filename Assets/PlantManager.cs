@@ -36,6 +36,7 @@ public class PlantManager : Singleton<PlantManager>
     public void showPlantHint(string name)
     {
         plantHinted[name] = true;
+
     }
 
     public bool isPlantHinted(string name)

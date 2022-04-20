@@ -1,3 +1,4 @@
+using ByteDance.Union;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
 
 
     public bool testMode = true;
+
+    bool isChina = true;
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
@@ -50,8 +53,14 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
 
     public void Load()
     {
-
-        Advertisement.Load(_unitId, this);
+        if (isChina)
+        {
+           // PangleAdsManager.Instance.LoadRewardAd();
+        }
+        else
+        {
+            Advertisement.Load(_unitId, this);
+        }
     }
 
     //public void LoadInter()
@@ -80,7 +89,33 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
     //    AdsManager.Instance.LoadInter();
     //}
 
-    public void ShowAd(IUnityAdsShowListener listener)
+    public void ShowAd(GameObject listener)
+    {
+        if (isChina)
+        {
+
+            ShowAdChina();
+        }
+        else
+        {
+            if (listener.GetComponent<IUnityAdsShowListener>()!=null)
+            {
+                ShowAd(listener.GetComponent<IUnityAdsShowListener>());
+
+            }
+            else
+            {
+                Debug.LogError("listener does not support ads in china " + isChina);
+            }
+        }
+    }
+
+    private void ShowAdChina()
+    {
+        PangleAdsManager.Instance.ShowRewardAd();
+    }
+
+    private void ShowAd(IUnityAdsShowListener listener)
     {
         if (!Advertisement.isInitialized)
         {
