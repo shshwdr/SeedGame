@@ -19,6 +19,9 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
     public string plantName;
     public string information;
 
+    float adTime;
+    float adInvalidTime = 180;
+
     private void Awake()
     {
         mainThreadId = Thread.CurrentThread.ManagedThreadId;
@@ -44,8 +47,8 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
         configuration.appID = "5000546";
 #endif
         AndroidJavaObject TM = new AndroidJavaObject("android.telephony.TelephonyManager");
-
-        string IMEI = TM.Call<string>("getDeviceId");
+        //DeviceInfo deviceInfo = DeviceInfo.Companion.getInstance();
+        //string IMEI = TM.Call<string>("getDeviceId");
         Pangle.InitializeSDK(callbackmethod, new CustomConfiguration
         {
             CanUseLocation = false,
@@ -56,10 +59,10 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
             MacAddress = "fake mac address",
             //Latitude = 35.23,
             //Longitude = 139.12,
-            DevImei = IMEI,
+            DevImei = "fake",
             DevOaid = "fake oaid"
         });
-        LoadRewardAd();
+        //LoadRewardAd();
     }
 
     private AdNative AdNative
@@ -94,9 +97,19 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
     {
         if (this.rewardAd != null)
         {
-            this.rewardAd.Dispose();
-            Debug.Log("cstest dispose add ");
-            this.rewardAd = null;
+            if(Time.time - adTime > adInvalidTime)
+            {
+
+                this.rewardAd.Dispose();
+                Debug.Log("cstest dispose add ");
+                this.rewardAd = null;
+            }
+            else
+            {
+                Debug.Log("cstest dont dispose ");
+                return;
+            }
+
         }
 
         string iosSlotID = "900546826";
@@ -125,6 +138,7 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
             .Build();
         Debug.Log("cstest LoadRewardAd");
         this.AdNative.LoadRewardVideoAd(adSlot, new RewardVideoAdListener(this), callbackOnMainThread);
+        adTime = Time.time;
     }
 
     /// <summary>
