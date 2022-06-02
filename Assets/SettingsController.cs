@@ -7,10 +7,24 @@ using UnityEngine.SceneManagement;
 public class SettingsController : MonoBehaviour
 {
     EventInstance snapshot;
+    public GameObject hideUILayer;
     public void OnBackToMenuButton()
     {
         SaveLoadManager.Instance.saveGame();
         SceneManager.LoadScene(0);
+    }
+
+    public void hideUI()
+    {
+
+        closeSetting();
+        hideUILayer.SetActive(true);
+        hideUILayer.GetComponent<HideUIView>().show();
+    }
+
+    public void selectLanguage(int l)
+    {
+        Translator.Instance.SetDisplayLanguage(l);
     }
     public void respawn()
     {
@@ -35,6 +49,7 @@ public class SettingsController : MonoBehaviour
     public void closeSetting()
     {
         Time.timeScale = 1;
+        gameObject.SetActive(false);
         //snapshot.stop(STOP_MODE.ALLOWFADEOUT);
     }
     public void playMenuSound()

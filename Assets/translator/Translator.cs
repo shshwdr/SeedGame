@@ -55,7 +55,7 @@ public class Translator : Singleton<Translator>
     //    ServiceLocator.instance.GetService<Translator>().EnsureTranslationsLoaded(localCallback);
     //}
 
-    private void SetDisplayLanguage(int index)
+    public void SetDisplayLanguage(int index)
     {
         PlayerPrefs.SetInt("displayLanguage", index);
         UnityEngine.Assertions.Assert.IsTrue(termData != null);
