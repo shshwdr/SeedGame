@@ -22,6 +22,9 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
     float adTime;
     float adInvalidTime = 180;
 
+    string oaid = "fake";
+    bool sdkInited = false;
+
     private void Awake()
     {
         mainThreadId = Thread.CurrentThread.ManagedThreadId;
@@ -32,6 +35,63 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
         Debug.Log("`````````````````初始化``````" + success + "-----" + message);
     }
 
+    IEnumerator fakeFetchOAID()
+    {
+        Debug.Log("fake fetch oaid start");
+        yield return new WaitForSecondsRealtime(5);
+        Debug.Log("fake fetch oaid");
+        oaid = "cstest fake OAID";
+
+        initSDK();
+    }
+
+    void fetchOAID()
+    {
+
+       // logdb.text = "";
+        DeviceIDHelper.inst.getDeviceID((err, res) =>
+        {
+            if (err != null)
+            {
+                Debug.Log("oaid error "+err.Message);
+                return;
+                //logdb.text += err.Message + "\r\n";
+            }
+            bool isSucceed = false;
+            foreach (var v in res)
+            {
+                isSucceed = true;
+                Debug.Log("id: " + v);
+                oaid = v;
+                //logdb.text += "id: " + v + "\r\n";
+            }
+            if (isSucceed)
+            {
+                Debug.Log("succeed load oaid");
+                initSDK();
+            }
+        }, true);
+    }
+
+    void initSDK()
+    {
+        Debug.Log("init sdk with oaid "+oaid);
+        Pangle.InitializeSDK(callbackmethod, new CustomConfiguration
+        {
+            CanUseLocation = false,
+            CanReadAppList = false,
+            CanUsePhoneState = false,
+            CanUseWifiState = false,
+            CanUseWriteExternal = false,
+            MacAddress = "fake mac address",
+            //Latitude = 35.23,
+            //Longitude = 139.12,
+            DevImei = "fake",
+            DevOaid = oaid
+        });
+        sdkInited = true;
+        LoadRewardAd();
+    }
 
     public static bool callbackOnMainThread = true;
     public void OnCallbackThreadChange(Toggle value)
@@ -46,22 +106,9 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
         PangleConfiguration configuration = PangleConfiguration.CreateInstance();
         configuration.appID = "5000546";
 #endif
-        AndroidJavaObject TM = new AndroidJavaObject("android.telephony.TelephonyManager");
-        //DeviceInfo deviceInfo = DeviceInfo.Companion.getInstance();
-        //string IMEI = TM.Call<string>("getDeviceId");
-        Pangle.InitializeSDK(callbackmethod, new CustomConfiguration
-        {
-            CanUseLocation = false,
-            CanReadAppList = false,
-            CanUsePhoneState = false,
-            CanUseWifiState = false,
-            CanUseWriteExternal = false,
-            MacAddress = "fake mac address",
-            //Latitude = 35.23,
-            //Longitude = 139.12,
-            DevImei = "fake",
-            DevOaid = "fake oaid"
-        });
+       // StartCoroutine(fakeFetchOAID());
+        fetchOAID();
+        initSDK();
         //LoadRewardAd();
     }
 
@@ -95,6 +142,10 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
     /// </summary>
     public void LoadRewardAd()
     {
+        //if (!sdkInited)
+        //{
+        //    initSDK();
+        //}
         if (this.rewardAd != null)
         {
             if(Time.time - adTime > adInvalidTime)

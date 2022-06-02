@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24358c7d",
         "name": "com.flavedo.sprouted",
-        "processId": 18548,
+        "processId": 26187,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -89,67 +89,55 @@
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 6028,
+            "processId": 32208,
             "exited": true
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 27987,
+            "processId": 18549,
             "exited": true
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 27994,
+            "processId": 6135,
             "exited": true
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 11979,
+            "processId": 26181,
             "exited": true
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 11980,
+            "processId": 7437,
             "exited": true
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 11982,
+            "processId": 26182,
             "exited": false
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 11983,
+            "processId": 26185,
             "exited": false
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 18545,
+            "processId": 10615,
             "exited": false
         },
         {
             "deviceId": "24358c7d",
             "name": "com.flavedo.sprouted",
-            "processId": 18546,
-            "exited": false
-        },
-        {
-            "deviceId": "24358c7d",
-            "name": "com.flavedo.sprouted",
-            "processId": 18547,
-            "exited": false
-        },
-        {
-            "deviceId": "24358c7d",
-            "name": "com.flavedo.sprouted",
-            "processId": 18548,
+            "processId": 26187,
             "exited": false
         }
     ],
@@ -203,7 +191,7 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "",
+    "m_Filter": "oaid",
     "m_FilterIsRegularExpression": false,
     "m_SymbolPaths": []
 }

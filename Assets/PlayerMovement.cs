@@ -152,9 +152,9 @@ public class PlayerMovement : SerializableObject
         //android
         if (usingJoyStick)
         {
-            horizontalMove = variableJoystick.Horizontal; 
-            verticalMove = variableJoystick.Vertical;
-           // Debug.Log("horizontal " + horizontalMove + " " + verticalMove);
+            horizontalMove = Mathf.Abs( variableJoystick.Horizontal)>0.01f?Mathf.Sign(variableJoystick.Horizontal):0; 
+            verticalMove = Mathf.Abs(variableJoystick.Vertical) > 0.01f ? Mathf.Sign(variableJoystick.Vertical) : 0;
+            // Debug.Log("horizontal " + horizontalMove + " " + verticalMove);
         }
         else
         {
