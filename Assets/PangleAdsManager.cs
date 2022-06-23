@@ -195,12 +195,12 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
     /// <summary>
     /// Show the reward Ad.
     /// </summary>
-    public void ShowRewardAd()
+    public void ShowRewardAd(GameObject listener)
     {
         if (this.rewardAd == null)
         {
             LoadRewardAd();
-            StartCoroutine(showad());
+            StartCoroutine(showad(listener));
             return;
         }
         else
@@ -210,7 +210,7 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
 
     }
 
-    IEnumerator showad()
+    IEnumerator showad(GameObject listener)
     {
         int waitTime = 7;
         while(this.rewardAd == null && waitTime>=0)
@@ -227,6 +227,7 @@ public class PangleAdsManager : Singleton<PangleAdsManager>
         {
             Debug.LogError("请先加载广告");
             this.information = "请先加载广告";
+            AdsManager.Instance.showUnityAd(listener);
             yield break;
         }
     }

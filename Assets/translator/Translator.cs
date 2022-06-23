@@ -14,7 +14,8 @@ public class Translator : Singleton<Translator>
 
     public TermData.Terms termData;
     private const int kEnglishIndex = -1;
-    private int currentLanguageIndex = 0;// kEnglishIndex;
+    private const int kChineseIndex = 0;
+    private int currentLanguageIndex = 0;// chinese
 
     private string unTranslatedTerms = "";
 
@@ -61,6 +62,33 @@ public class Translator : Singleton<Translator>
         UnityEngine.Assertions.Assert.IsTrue(termData != null);
         currentLanguageIndex = index;
         DisplayLanguageChanged();
+    }
+
+    private void Awake()
+    {
+        if (AdsManager.isChina)
+        {
+            if (Application.systemLanguage == SystemLanguage.English)
+            {
+                currentLanguageIndex = kEnglishIndex;
+            }
+            else
+            {
+                currentLanguageIndex = kChineseIndex;
+            }
+        }
+        else
+        {
+
+            if (Application.systemLanguage == SystemLanguage.Chinese || Application.systemLanguage ==SystemLanguage.ChineseSimplified || Application.systemLanguage == SystemLanguage.ChineseTraditional)
+            {
+                currentLanguageIndex = kChineseIndex;
+            }
+            else
+            {
+                currentLanguageIndex = kEnglishIndex;
+            }
+        }
     }
 
     public bool NeedsLoad()

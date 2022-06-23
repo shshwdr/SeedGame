@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "24358c7d",
+    "m_SelectedDeviceId": "R5CT511107A",
     "m_SelectedPackage": {
-        "deviceId": "24358c7d",
+        "deviceId": "R5CT511107A",
         "name": "com.flavedo.sprouted",
-        "processId": 26187,
+        "processId": 27004,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -139,6 +139,24 @@
             "name": "com.flavedo.sprouted",
             "processId": 26187,
             "exited": false
+        },
+        {
+            "deviceId": "24358c7d",
+            "name": "com.flavedo.sprouted",
+            "processId": 16987,
+            "exited": false
+        },
+        {
+            "deviceId": "24358c7d",
+            "name": "com.flavedo.sprouted",
+            "processId": 11299,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CT511107A",
+            "name": "com.flavedo.sprouted",
+            "processId": 27004,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -191,7 +209,7 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "oaid",
+    "m_Filter": "",
     "m_FilterIsRegularExpression": false,
     "m_SymbolPaths": []
 }

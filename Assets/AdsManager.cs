@@ -22,7 +22,7 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
 
     public bool testMode = true;
 
-    bool isChina = true;
+    public static bool isChina = true;
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
@@ -93,11 +93,12 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
     {
         if (isChina)
         {
-
-            ShowAdChina();
+            Debug.Log("is in china");
+            PangleAdsManager.Instance.ShowRewardAd(listener);
         }
         else
         {
+            Debug.Log("is not in china");
             if (listener.GetComponent<IUnityAdsShowListener>()!=null)
             {
                 ShowAd(listener.GetComponent<IUnityAdsShowListener>());
@@ -110,13 +111,25 @@ public class AdsManager : Singleton<AdsManager>, IUnityAdsLoadListener,IUnityAds
         }
     }
 
-    private void ShowAdChina()
+    public void showUnityAd(GameObject listener)
     {
-        PangleAdsManager.Instance.ShowRewardAd();
+
+        if (listener.GetComponent<IUnityAdsShowListener>() != null)
+        {
+            ShowAd(listener.GetComponent<IUnityAdsShowListener>());
+
+        }
+        else
+        {
+            Debug.LogError("listener does not support ads in china " + isChina);
+        }
     }
+
 
     private void ShowAd(IUnityAdsShowListener listener)
     {
+
+        Debug.Log("will show ad in unity");
         if (!Advertisement.isInitialized)
         {
             Advertisement.Initialize(_gameId, testMode);  //// 1st parameter is String and 2nd is boolean
